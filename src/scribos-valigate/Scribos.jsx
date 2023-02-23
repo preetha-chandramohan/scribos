@@ -33,7 +33,7 @@ function App() {
     initialize(
       "valigate",
       // "<ENTER_THE_APP_ID_PROVIDED_BY_SCRIBOS_HERE>",
-      "DEMO_30_QVFQETBLHSET38KN7L8W9KLDJY3VQY49",
+      "MDJN_STAGE_R1TL9G5Q2LXK924DK7QV",
       `${process.env.PUBLIC_URL}/valigate/worker.f029c5c.js`,
       en
     );
@@ -70,7 +70,7 @@ function App() {
       <div className="content">
         {error && <Error error={error} />}
         {!error && !result && <div id="valigate" className="valigate"></div>}
-        {!error && result && <Result result={result} />}
+        {result && <Result result={result} />}
       </div>
       <div className="footer">© COMPANY 2022</div>
     </div>
