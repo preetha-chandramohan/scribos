@@ -1,0 +1,18 @@
+{
+  "loadingModalText": "Checking compatibility ...",
+  "loadingModalTitle": "Preparing your app",
+  "loadingProgressLabel": "Processing the ValiGate code ...",
+  "permissionCameraScreenAction": "Continue",
+  "permissionCameraScreenText": "In order to scan the ValiGate code, please grant access to your camera.",
+  "permissionCameraScreenTitle": "We need access to your camera.",
+  "permissionLocationScreenAction": "Continue",
+  "permissionLocationScreenText": "Location information will only be used for an improved authentication of your product.",
+  "permissionLocationScreenTitle": "Please share your location",
+  "tapToScan": "Tap to start scanning",
+  "timeoutModalContinue": "Continue",
+  "timeoutModalReport": "Report",
+  "tryAnywayText": "Sorry, this phone has not been configured for ValiGate® yet.",
+  "tryAnywayTitle": "Phone not configured",
+  "tryAnywayOk": "Try anyway",
+  "valigateTimeoutOrError": "ValiGate feature could not be verified. Please try again or report to us."
+}

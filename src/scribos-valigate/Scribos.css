@@ -1,0 +1,95 @@
+/* customize scribos/valigate css via custom properties */
+.vg-root {
+  --border-radius: 4px;
+  --primary-color: green;
+  --secondary-color: #bbb;
+}
+
+.app {
+  /* we are using fixed heights and a JS update function to handle mobile browsers with/without browser bar etc. */
+  /* see https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+  /* can be replaced by dynamic viewport units in the future (see https://web.dev/viewport-units/) */
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  flex: 0 0 auto;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  flex: 1 0 auto;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 86);
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  flex: 0 0 auto;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0.5rem;
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 2rem;
+  background-color: #feeded;
+  max-height: 300px;
+  margin-top: 3rem;
+}
+
+.block-screen__title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* .block-screen__content {} */
+
+.block-screen__content-text {
+  line-height: 1.4;
+}
+
+.block-screen__actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.valigate {
+  width: 100%;
+  height: 100%;
+}
+
+.result {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.result__status {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  color: white;
+}
