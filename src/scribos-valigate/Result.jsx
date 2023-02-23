@@ -8,16 +8,25 @@ export const Result = ({ result }) => {
         {result.validity.description_translated}
       </div>
       <div>
-        {result.verification_attributes
+        {Object.keys(result.attributes)
           .filter(
-            (attribute) =>
-              attribute.type === "image" && attribute.value != null,
-          )
-          .map((image) => (
+            (attribute) => attribute === "rfxcel_product_image")
+          .map((attribute) => (
             <img width="200px" alt="product"
-              key={image.name}
-              src={image.value}
+              key={attribute}
+              // image data coming from rfxcel are always in the jpeg format
+              src={`data:image/jpeg;base64,${result.attributes[attribute].values[0].value}`}
             />
+          ))}
+      </div>
+      <div>
+        {Object.keys(result.attributes)
+          .filter(
+            (attribute) => attribute !== "rfxcel_product_image")
+          .map((attribute) => (
+            <p key={attribute}>
+              <strong>{attribute}</strong> {result.attributes[attribute].values[0].value}
+            </p>
           ))}
       </div>
       <div>
