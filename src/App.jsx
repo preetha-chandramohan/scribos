@@ -203,8 +203,8 @@ function App({ userLocaleX }) {
                 onClick={handleLangPick}
               />
             </LangageContainer>
-            {show && region == MALAYSIA && <Scribos/>}
-            {!show && <div>
+            {(region == MALAYSIA) && <Scribos/>}
+            {!(region == MALAYSIA) && <div>
               <Logo region={region} />
               <Texts />
             </div>}
