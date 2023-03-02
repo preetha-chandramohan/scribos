@@ -93,3 +93,57 @@
   font-weight: bold;
   color: white;
 }
+.authentication-product-container {
+  color: #103d8c;
+  text-align: center;
+  margin: 5% 10%;
+}
+
+.authentication-product__static-desc {
+  margin-bottom: 8%;
+}
+
+.authentication-product__info {
+  text-align: left;
+  align-items: center;
+  margin-bottom: 2%;
+  margin-left: 10%;
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+.authentication-product__icon img {
+  width: 50%;
+}
+
+.authentication-product__title {
+  margin: 5px 0;
+}
+
+.authentication-product__value {
+  color: #231f20;
+}
+
+.authentication-product__scan-button-style {
+  border-radius: 35px;
+  height: 75px;
+  align-items: center;
+  color: #103d8c;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  display: grid;
+  padding: 10px 0;
+  font-size: 30px;
+  border: 2px solid #103d8c;
+}
+
+.authentication-product__scan-logo {
+  width: 22%;
+  margin-top: 3%;
+}
+
+.authentication-product__factory-image {
+  width: 100%;
+}

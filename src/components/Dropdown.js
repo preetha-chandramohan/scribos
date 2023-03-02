@@ -11,7 +11,7 @@ import {
 import id_flag from "../helpers/svgs/id_flag.svg";
 import my_flag from "../helpers/svgs/my_flag.svg";
 import ph_flag from "../helpers/svgs/ph_flag.svg";
-import THFlag from "../helpers/svgs/th_flag";
+import th_flag from "../helpers/svgs/th_flag.svg";
 import vi_flag from "../helpers/svgs/vi_flag.svg";
 
 const StyledLi = styled.li`
@@ -83,7 +83,7 @@ const DropDown = ({ withFlag, onClick, region = MALAYSIA, list }) => {
         setFlag(vi_flag);
         break;
       case THAILAND:
-        setFlag(THFlag);
+        setFlag(th_flag);
         break;
       case PHILIPPINES:
         setFlag(ph_flag);

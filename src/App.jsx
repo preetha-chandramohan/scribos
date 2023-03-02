@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Avenir Next', sans-serif;
     background: ${(props) =>
-      `radial-gradient(${props.theme.colors.mainGoldLight}, ${props.theme.colors.mainGold})`};
+    `radial-gradient(${props.theme.colors.mainGoldLight}, ${props.theme.colors.mainGold})`};
   }
   
 `;
@@ -50,39 +50,22 @@ function App({ userLocaleX }) {
 
   const [logs] = useState("");
   const country = useUserCoutry();
-
-  function printLogs(msg) {
-    //You can uncomment these two lines to get the logs on the landingpage
-    //globalLogs += '<br/>' + msg;
-    //setLogs(globalLogs);
-  }
+  console.log(country)
 
   useEffect(() => {
-    printLogs("LANGUAGE DETECTION LOGS:");
     setUserLocale(userLocaleX.substring(0, 2).toLowerCase());
     setUserRegion(userLocaleX.slice(-2).toLowerCase());
   }, [userLocaleX]);
 
   useEffect(() => {
-    printLogs(
-      "<br/>userLocale = " +
-        userLocale +
-        " | userRegion = " +
-        userRegion +
-        " | country = " +
-        country
-    );
-    printLogs("- check for locale and region");
     if (userLocale === "id" || userRegion === "id") {
-      printLogs("-- set as ID");
       setShort("ID");
       setCurrentAppLocale(AppLocale[userLocale]);
       setRegion(INDONESIA);
       setListOfLang([]);
     } else if (userLocale === "vi" || userRegion === "vn") {
-      printLogs("-- set as VI");
       setShort("VI");
-      setCurrentAppLocale(AppLocale["vi"]);
+      setCurrentAppLocale(AppLocale[userLocale]);
       setRegion(VIETNAM);
       setListOfLang([]);
     } else if (userLocale === "th" || userRegion === "th") {
@@ -91,28 +74,23 @@ function App({ userLocaleX }) {
       setRegion(THAILAND);
       setListOfLang([]);
     } else if (userLocale === "ms" || userRegion === "my") {
-      printLogs("-- set as MY");
       setShort("EN");
       setCurrentAppLocale(AppLocale[userLocale]);
       setRegion(MALAYSIA);
       setListOfLang(["EN", "MS"]);
     } else if (userLocale === "en" || userRegion === "ph") {
-      printLogs("-- set as PH");
       setShort("EN");
       setCurrentAppLocale(AppLocale["phEn"]);
       setRegion("Philippines");
       setListOfLang([]);
     } else {
-      printLogs("- check by locale and region has failed");
-      printLogs("- let's try with country");
       if (country === "id") {
-        printLogs("-- set as ID thx to country");
         setShort("ID");
         setCurrentAppLocale(AppLocale["id"]);
         setRegion(INDONESIA);
         setListOfLang([]);
       } else if (country === "vn") {
-        printLogs("-- set as VN thx to country");
+        console.log("asdas")
         setShort("VI");
         setCurrentAppLocale(AppLocale["vn"]);
         setRegion(VIETNAM);
@@ -123,8 +101,6 @@ function App({ userLocaleX }) {
         setRegion(THAILAND);
         setListOfLang([]);
       } else {
-        printLogs("- check by country has failed");
-        printLogs("-- set as MY as default");
         setShort("EN");
         setRegion(MALAYSIA);
         setListOfLang(["EN", "MS"]);
@@ -174,6 +150,7 @@ function App({ userLocaleX }) {
 
   return (
     <LocaleContext.Provider value={userLocale}>
+
       <IntlProvider
         locale={currentAppLocale.locale}
         messages={currentAppLocale.messages}
@@ -196,22 +173,21 @@ function App({ userLocaleX }) {
                 region={region}
                 list={[MALAYSIA, INDONESIA, VIETNAM, THAILAND, "Philippines"]}
               />
-              {region == MALAYSIA && <button onClick={() => setShow(!show)}>Take the shot!</button>}
+              {/* {region == MALAYSIA && <button onClick={() => setShow(!show)}>Take the shot!</button>} */}
               <DropDown
                 list={listOfLang}
                 region={short}
                 onClick={handleLangPick}
               />
             </LangageContainer>
-            {show && region == MALAYSIA && <Scribos/>}
-            {!show && <div>
+            {region == MALAYSIA && <Scribos />}
+            {!(region == MALAYSIA) && <div>
               <Logo region={region} />
               <Texts />
             </div>}
-            {!show && <Download region={region} isIOS={isIOS} isMobile={isMobile} />}
+            {!((region == MALAYSIA)) && <Download region={region} isIOS={isIOS} isMobile={isMobile} />}
             <div dangerouslySetInnerHTML={{ __html: logs }}></div>
             <br />
-            <h1>{show ? "true" : "false"}</h1>
           </Background>
         </Theme>
       </IntlProvider>

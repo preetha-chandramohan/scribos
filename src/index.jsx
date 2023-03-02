@@ -2,15 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import getUserLocale from "get-user-locale";
 import * as serviceWorker from "./serviceWorker";
-// import Scribos from "./scribos-valigate/Scribos";
+import { MalaysiaUI } from "./scribos-valigate/MalaysiaUI";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBTLfxvzpgrKPRZkizqZLC4tSqPC60Fhog-testtss",
+  apiKey: "AIzaSyBTLfxvzpgrKPRZkizqZLC4tSqPC60Fhog",
   authDomain: "enfamobileapp.firebaseapp.com",
   databaseURL: "https://enfamobileapp.firebaseio.com",
   projectId: "enfamobileapp",
@@ -31,13 +30,10 @@ logEvent(analytics, "trust_lp_opened");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {console.log(getUserLocale())}
     <App userLocaleX={getUserLocale()} />
-    {/* <Scribos /> */}
+    {/* <MalaysiaUI/> */}
   </React.StrictMode>
 );
 
 serviceWorker.unregister();
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
