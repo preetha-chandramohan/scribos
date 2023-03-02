@@ -1,0 +1,24 @@
+{
+   "applinks":{
+      "details":[
+         {
+            "appIDs":[
+               "67AU7G4CTB.my.com.enfagrow.stage",
+               "U5G65A9M2B.my.com.enfagrow",
+               "U5G65A9M2B.id.co.enfa",
+               "67AU7G4CTB.id.co.enfa.stage",
+               "U5G65A9M2B.vn.rb.enfa",
+               "67AU7G4CTB.vn.rb.enfa.stage",
+               "U5G65A9M2B.ph.com.enfagrow",
+               "67AU7G4CTB.ph.com.enfagrow.stage"
+            ],
+            "components":[
+               {
+                  "/":"*",
+                  "comment":"match all"
+               }
+            ]
+         }
+      ]
+   }
+}
