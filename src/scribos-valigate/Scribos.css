@@ -148,7 +148,7 @@
   width: 100%;
 }
 
-/* .authentication-product-bg {
-  background: url("Assets/authentication-product-background.png") no-repeat;
+.authentication-product-bg {
+  background: url("../assets/authentication-product-background.png") no-repeat;
   background-size: 970px 2922px;
-} */
+}
