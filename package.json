@@ -2,6 +2,7 @@
   "name": "example-react-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://preetha-chandramohan.github.io",
   "dependencies": {
     "@scribos/valigate": "file:vendor/scribos-valigate-1.1.0.tgz",
     "@testing-library/jest-dom": "^5.16.5",
