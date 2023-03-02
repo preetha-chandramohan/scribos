@@ -5,6 +5,7 @@ import "./Scribos.css";
 export const MalaysiaUI = ({ result }) => {
   return (
     <div class="authentication-product-bg">
+      <img src="Assets/authentication-product-background.png" width="100%" height="1400px"/>
       <div className="authentication-product-container">
         <img src={`data:image/jpeg;base64,${result.rfxcel_product_image.values[0].value}`} alt="Production Date Icon" width="100%" />
         <h2 className="authentication-product__name">{result.rfxcel_product_name.values[0].value}</h2>

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { MalaysiaUI } from "./MalaysiaUI";
+import { MalaysiaStageUI } from "./MalaysiaStageUI";
 
 export const Result = ({ result }) => {
   return (
@@ -46,6 +47,7 @@ export const Result = ({ result }) => {
           ))} */}
       </div>
       {result.attributes && <MalaysiaUI result={result.attributes}/>}
+      {result.attributes && <MalaysiaStageUI result={result.attributes}/>}
     </div>
   );
 };

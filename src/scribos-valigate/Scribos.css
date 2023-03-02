@@ -94,10 +94,18 @@
   color: white;
 }
 
+.authentication-product-bg {
+  position: relative;
+}
+
 .authentication-product-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -5%;
   color: #103d8c;
   text-align: center;
-  margin: 5% 10%;
+  margin: -5% 14% 15%;
 }
 
 .authentication-product__static-desc {
@@ -123,6 +131,8 @@
 
 .authentication-product__value {
   color: #231f20;
+  margin: 3% 0;
+  font-weight: normal;
 }
 
 .authentication-product__scan-button-style {
@@ -148,7 +158,207 @@
   width: 100%;
 }
 
-.authentication-product-bg {
-  background: url("../assets/authentication-product-background.png") no-repeat;
-  background-size: 970px 2922px;
+.authentication-product__name {
+  font-size: 20px;
+}
+
+/* S3-S5 CSS */
+.authentication-productstages-bg {
+  position: relative;
+}
+
+.authentication-productstages-container {
+  color: #103d8c;
+  text-align: center;
+  margin: 2% 5% 2%;
+  padding: 0 1px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.authentication-productstages__factory-image {
+  width: 100%;
+}
+
+.authentication-productstages__scan-button-style {
+  border-radius: 35px;
+  align-items: center;
+  color: #103d8c;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  display: grid;
+  padding: 10px 0;
+  font-size: 20px;
+  border: 2px solid #103d8c;
+}
+
+.authentication-product__timeline {
+  position: relative;
+}
+
+.authentication-product__timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #103d8c;
+  top: -12px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  height: 247px;
+}
+
+.authentication-product__container {
+  padding: 0;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.authentication-product__container.left {
+  left: 0;
+}
+
+.authentication-product__container.right {
+  left: 50%;
+}
+
+.authentication-product__container::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: calc(50% - 15px);
+  right: -16px;
+  z-index: 1;
+}
+
+.authentication-product__container.right::after {
+  left: -16px;
+}
+
+.authentication-product__container::before {
+  content: '';
+  position: absolute;
+  width: 78%;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #f4811f;
+  z-index: 1;
+}
+
+.authentication-product__container.right::before {
+  left: 8px;
+}
+
+.authentication-product__container .content {
+  padding: 30px 90px 30px 30px;
+  /*   background: #F6D155; */
+  position: relative;
+  border-radius: 0 500px 500px 0;
+}
+
+.authentication-product__container.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+
+.authentication-product__container .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #006E51;
+}
+
+.authentication-product__container .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.authentication-product__container.left .authentication-productstage__content {
+  text-align: right;
+  margin-right: 16%;
+}
+
+.authentication-product__container.right .authentication-productstage__content {
+  margin-left: 16%;
+  text-align: left;
+}
+
+.authentication-productstages__header {
+  background: url(../assets/s4-title-background.png) no-repeat;
+  color: #ffff;
+  display: grid;
+  grid-template-columns: 62% 35%;
+  align-items: center;
+  position: relative;
+  margin-top: 10%;
+}
+
+.authentication-productstages__header-packshot {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  right: 0;
+  margin-top: -20%;
+}
+
+.authentication-productstages__name {
+  font-size: 14px;
+  margin: 0;
+  padding: 9% 0 2%;
+}
+
+.authentication-productstages__static-desc {
+  font-size: 10px;
+  margin: 0;
+  padding: 0 0 7%;
+}
+
+.authentication-productstages__packshoticon {
+  width: 100%;
+}
+
+.authentication-productstage__title {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.authentication-productstage__value {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.authentication-productstages__scan-button {
+  margin: 5%;
+}
+
+.authentication-product__container.left.one::after {
+  background: url(../assets/S4-production-icon.png) no-repeat;
+  background-size: 32px;
+}
+
+.authentication-product__container.left.two::after {
+  background: url(../assets/S4-expiration-icon.png) no-repeat;
+  background-size: 32px;
+}
+
+.authentication-product__container.right.one::after {
+  background: url(../assets/s4-batch-icon.png) no-repeat;
+  background-size: 32px;
+}
+
+.authentication-product__container.right.two::after {
+  background: url(../assets/S4-factory-icon.png) no-repeat;
+  background-size: 32px;
+}
+
+.authentication-productstages__scan-title {
+  margin: 0;
 }
