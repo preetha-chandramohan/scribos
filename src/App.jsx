@@ -180,12 +180,12 @@ function App({ userLocaleX }) {
                 onClick={handleLangPick}
               />
             </LangageContainer>
-            {show && region == MALAYSIA && <Scribos/>}
-            {!show && <div>
+            {region == MALAYSIA && <Scribos/>}
+            {!(region == MALAYSIA) && <div>
               <Logo region={region} />
               <Texts />
             </div>}
-            {!((region == MALAYSIA)) && <Download region={region} isIOS={isIOS} isMobile={isMobile} />}
+            {!(region == MALAYSIA) && <Download region={region} isIOS={isIOS} isMobile={isMobile} />}
             <div dangerouslySetInnerHTML={{ __html: logs }}></div>
             <br />
           </Background>
