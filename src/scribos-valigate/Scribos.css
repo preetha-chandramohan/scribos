@@ -93,6 +93,7 @@
   font-weight: bold;
   color: white;
 }
+
 .authentication-product-container {
   color: #103d8c;
   text-align: center;
@@ -125,8 +126,7 @@
 }
 
 .authentication-product__scan-button-style {
-  border-radius: 35px;
-  height: 75px;
+  border-radius: 50px;
   align-items: center;
   color: #103d8c;
   text-decoration: none;
@@ -134,8 +134,8 @@
   text-align: center;
   width: 100%;
   display: grid;
-  padding: 10px 0;
-  font-size: 30px;
+  padding: 18px 0;
+  font-size: 20px;
   border: 2px solid #103d8c;
 }
 
@@ -147,3 +147,8 @@
 .authentication-product__factory-image {
   width: 100%;
 }
+
+/* .authentication-product-bg {
+  background: url("Assets/authentication-product-background.png") no-repeat;
+  background-size: 970px 2922px;
+} */

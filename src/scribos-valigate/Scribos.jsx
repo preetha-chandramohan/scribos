@@ -72,7 +72,7 @@ function App() {
         {!error && !result && <div id="valigate" className="valigate"></div>}
         {result && <Result result={result} />}
       </div>
-      <div className="footer">© COMPANY 2022</div>
+      {/* <div className="footer">© COMPANY 2022</div> */}
     </div>
   );
 }
