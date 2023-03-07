@@ -16,6 +16,9 @@ import { INDONESIA, MALAYSIA, THAILAND, VIETNAM } from "./helpers/const";
 import { analytics } from "./index";
 import Theme from "./helpers/theme";
 import Scribos from "./scribos-valigate/Scribos";
+console.log(AppLocale);
+
+
 
 export function useUserCoutry() {
   const [country, setCountry] = useState("EN");
@@ -46,11 +49,11 @@ function App({ userLocaleX }) {
   const [listOfLang, setListOfLang] = useState([]);
   const [region, setRegion] = useState("Select");
   const [short, setShort] = useState("EN");
-  const [show, setShow] = useState(false);
 
   const [logs] = useState("");
   const country = useUserCoutry();
   console.log(country)
+  const checkMY = () => region === MALAYSIA ? true : false;
 
   useEffect(() => {
     setUserLocale(userLocaleX.substring(0, 2).toLowerCase());
@@ -173,19 +176,18 @@ function App({ userLocaleX }) {
                 region={region}
                 list={[MALAYSIA, INDONESIA, VIETNAM, THAILAND, "Philippines"]}
               />
-              {/* {region == MALAYSIA && <button onClick={() => setShow(!show)}>Take the shot!</button>} */}
               <DropDown
                 list={listOfLang}
                 region={short}
                 onClick={handleLangPick}
               />
             </LangageContainer>
-            {region == MALAYSIA && <Scribos/>}
-            {!(region == MALAYSIA) && <div>
+            {checkMY() && <Scribos/>}
+            {!(checkMY()) && <div>
               <Logo region={region} />
               <Texts />
             </div>}
-            {!(region == MALAYSIA) && <Download region={region} isIOS={isIOS} isMobile={isMobile} />}
+            {!(checkMY()) && <Download region={region} isIOS={isIOS} isMobile={isMobile} />}
             <div dangerouslySetInnerHTML={{ __html: logs }}></div>
             <br />
           </Background>

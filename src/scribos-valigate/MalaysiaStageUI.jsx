@@ -5,27 +5,24 @@ import "./Scribos.css";
 export const MalaysiaStageUI = ({ result }) => {
     return (
         <div className="authentication-productstages-bg">
-            <img src="Assets/Stage4-product-background.png" width="100%" height="1100px" />
+            <img src="Assets/Stage4-product-background.png" width="100%" height="1100px" alt="Product Background"/>
             <div className="authentication-productstages-container">
                 <div className="authentication-productstages__scan-process">
-                    <img className="authentication-productstages__scan-logo" src="Assets/S4-scan-icon.png"
-                        alt="Product Scan Image" />
+                    <img className="authentication-productstages__scan-logo" src="Assets/S4-scan-icon.png" alt="Product Scan" />
                     <h3 className="authentication-productstages__scan-title">Authentication system</h3>
-                    <p className="authentication-productstages__scan-desc">Our authentication system is patented and the QR Code
-                        is
-                        unique
-                        and cannot be duplicated. Any attempt to
-                        duplicate the QR code can be traced.
+                    <p className="authentication-productstages__scan-desc">
+                        Our authentication system is patented and the QR Code is unique and cannot be duplicated. Any attempt to duplicate the QR code can be traced.
                     </p>
                 </div>
                 <div className="authentication-productstages__header">
                     <div className="authentication-productstages__header-content">
-                        <h3 className="authentication-productstages__name">{result.rfxcel_product_name.values[0].value}</h3>
+                        <h3 className="authentication-productstages__name">
+                            {result.rfxcel_product_name.values[0].value}
+                        </h3>
                         <p className="authentication-productstages__static-desc">Authentic product label</p>
                     </div>
                     <div className="authentication-productstages__header-packshot">
-                        <img className="authentication-productstages__packshoticon" src={`data:image/jpeg;base64,${result.rfxcel_product_image.values[0].value}`}
-                            alt="Product packshot" />
+                        <img className="authentication-productstages__packshoticon" src={`data:image/jpeg;base64,${result.rfxcel_product_image.values[0].value}`} alt="Product packshot" />
                     </div>
                 </div>
                 <div className="authentication-product__timeline">
@@ -62,16 +59,14 @@ export const MalaysiaStageUI = ({ result }) => {
                         </div>
                     </div>
                 </div>
-                <img className="authentication-productstages__factory-image" src="./Assets/Chonburi, TH.jpg"
-                    alt="Manufacture Factory Image" width="500" />
+                <img className="authentication-productstages__factory-image" src="./Assets/Chonburi, TH.jpg" alt="Manufacture Factory" width="500" />
                 <div className="authentication-productstages__action">
                     <div className="authentication-productstages__scan-button">
-                        <a className="authentication-productstages__scan-button-style" href="/">Scan another Product
-                        </a>
+                        <a className="authentication-productstages__scan-button-style" href="/">Scan another Product</a>
                     </div>
                     <div className="authentication-productstages__enfamama-button">
-                        <a className="authentication-productstages__enfamama-button-style" href="/"><img
-                            src="Assets/enfamama-action-btn.png" width="91%" />
+                        <a className="authentication-productstages__enfamama-button-style" href="/">
+                            <img src="Assets/enfamama-action-btn.png" width="91%" alt="action button"/>
                         </a>
                     </div>
                 </div>

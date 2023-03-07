@@ -6,8 +6,7 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import getUserLocale from "get-user-locale";
 import * as serviceWorker from "./serviceWorker";
-import { MalaysiaUI } from "./scribos-valigate/MalaysiaUI";
-import { MalaysiaStageUI } from "./scribos-valigate/MalaysiaStageUI";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBTLfxvzpgrKPRZkizqZLC4tSqPC60Fhog",
@@ -33,7 +32,6 @@ root.render(
   <React.StrictMode>
     {console.log(getUserLocale())}
     <App userLocaleX={getUserLocale()} />
-    {/* <MalaysiaUI/> */}
   </React.StrictMode>
 );
 

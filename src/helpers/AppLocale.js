@@ -1,10 +1,46 @@
-import myEnLang from "./lang/entries/en-MY";
-import phEnLang from "./lang/entries/en-PH";
-import enLang from "./lang/entries/en-US";
-import idLang from "./lang/entries/id-ID";
-import myLang from "./lang/entries/ms-MY";
-import thLang from "./lang/entries/th-TH";
-import viLang from "./lang/entries/vi-VN";
+import { enMY, enPH, enUS, idID, msMY, thTH, viVN } from "./localeConst";
+const myEnLang = {
+  messages: {
+    ...enMY,
+  },
+  locale: "en-MY",
+};
+const phEnLang = {
+  messages: {
+    ...enPH,
+  },
+  locale: "en-PH",
+};
+const enLang = {
+  messages: {
+    ...enUS,
+  },
+  locale: "en-US",
+};
+const idLang = {
+  messages: {
+    ...idID,
+  },
+  locale: "id-ID",
+};
+const myLang = {
+  messages: {
+    ...msMY,
+  },
+  locale: "ms-MY",
+};
+const thLang = {
+  messages: {
+    ...thTH,
+  },
+  locale: "th-TH",
+};
+const viLang = {
+  messages: {
+    ...viVN,
+  },
+  locale: "vi-VN",
+};
 
 const AppLocale = {
   en: enLang,

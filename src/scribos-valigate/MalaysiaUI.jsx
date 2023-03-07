@@ -5,13 +5,13 @@ import "./Scribos.css";
 export const MalaysiaUI = ({ result }) => {
   return (
     <div class="authentication-product-bg">
-      <img src="Assets/authentication-product-background.png" width="100%" height="1400px"/>
+      <img src="Assets/authentication-product-background.png" width="100%" height="1400px" alt="Product Background"/>
       <div className="authentication-product-container">
         <img src={`data:image/jpeg;base64,${result.rfxcel_product_image.values[0].value}`} alt="Production Date Icon" width="100%" />
         <h2 className="authentication-product__name">{result.rfxcel_product_name.values[0].value}</h2>
         <p className="authentication-product__static-desc">Authentic product label</p>
         <div className="authentication-product__info">
-          <p className="authentication-product__icon"><img src="Assets/production-icon.png" /></p>
+          <p className="authentication-product__icon"><img src="Assets/production-icon.png" alt="production icon"/></p>
           <div className="authentication-product__details">
             <p className="authentication-product__title">Production Date</p>
             <h3 className="authentication-product__value">{result.rfxcel_mfg_date.values[0].value}</h3>
@@ -38,9 +38,9 @@ export const MalaysiaUI = ({ result }) => {
             <h3 className="authentication-product__value">{result.rfxcel_mfg_loc_name.values[0].value}</h3>
           </div>
         </div>
-        <img className="authentication-product__factory-image" src="Assets/Chonburi, TH.jpg" alt="Manufacture Factory Image" width="500" />
+        <img className="authentication-product__factory-image" src="Assets/Chonburi, TH.jpg" alt="Manufacture Factory" width="500" />
         <div className="authentication-product__scan-process">
-          <img className="authentication-product__scan-logo" src="Assets/authentication-scan.png" alt="Product Scan Image" />
+          <img className="authentication-product__scan-logo" src="Assets/authentication-scan.png" alt="Product Scan" />
           <h3 className="authentication-product__scan-title">Authentication system</h3>
           <p className="authentication-product__scan-desc">Our authentication system is patented and the QR Code is unique
             and cannot be duplicated. Any attempt to
