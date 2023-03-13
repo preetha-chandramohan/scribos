@@ -362,3 +362,35 @@
 .authentication-productstages__scan-title {
   margin: 0;
 }
+
+.authentication-product__backsection {
+  display: flex;
+  align-items: center;
+  background: #ffde8f;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -242%;
+  width: 140%;
+  left: -20%;
+  height: 42px;
+}
+
+.authentication-product__backsection-icon {
+  padding-left: 12%;
+}
+
+.authentication-product__backsection-content {
+  padding-left: 3%;
+}
+
+.authentication-productstages__scan-desc {
+  margin-top: 1%;
+  font-size: 14px;
+}
+
+.authentication-product__backsection-stage {
+  position: absolute;
+  margin-top: -19%;
+  left: 4%;
+}

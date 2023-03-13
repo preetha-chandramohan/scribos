@@ -6,6 +6,7 @@ import { getAnalytics, logEvent } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import getUserLocale from "get-user-locale";
 import * as serviceWorker from "./serviceWorker";
+import "./font.css";
 
 
 const firebaseConfig = {
