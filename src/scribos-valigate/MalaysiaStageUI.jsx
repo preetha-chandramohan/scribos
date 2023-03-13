@@ -5,14 +5,14 @@ import "./Scribos.css";
 export const MalaysiaStageUI = ({ result }) => {
     return (
         <div className="authentication-productstages-bg">
-            <img src="Assets/Product-upgrade-stages-bg.jpg" width="100%" height="1100px" />
+            <img src="Assets/Product-upgrade-stages-bg.jpg" width="100%" height="1100px" alt="background"/>
             <div className="authentication-productstages-container">
                 <div className="authentication-product__backsection-stage">
-                    <p className="authentication-product__backsection-icon-stage"><a href="/"><img src="Assets/consumer-arrow-s3.png" width="30px" /></a></p>
+                    <p className="authentication-product__backsection-icon-stage"><a href="/"><img src="Assets/consumer-arrow-s3.png" width="30px" alt="backsection"/></a></p>
                 </div>
                 <div className="authentication-productstages__scan-process">
                     <img className="authentication-productstages__scan-logo" src="Assets/S4-scan-icon.png"
-                        alt="Product Scan Image" />
+                        alt="Product Scan" />
                     <h3 className="authentication-productstages__scan-title">Authentication system</h3>
                     <p className="authentication-productstages__scan-desc">Our authentication system is patented and the QR Code
                         is
@@ -66,7 +66,7 @@ export const MalaysiaStageUI = ({ result }) => {
                     </div>
                 </div>
                 <img className="authentication-productstages__factory-image" src="./Assets/Chonburi, TH.jpg"
-                    alt="Manufacture Factory Image" width="500" />
+                    alt="Manufacture Factory" width="500" />
                 <div className="authentication-productstages__action">
                     <div className="authentication-productstages__scan-button">
                         <a className="authentication-productstages__scan-button-style" href="/">Scan another Product
@@ -74,7 +74,7 @@ export const MalaysiaStageUI = ({ result }) => {
                     </div>
                     <div className="authentication-productstages__enfamama-button">
                         <a className="authentication-productstages__enfamama-button-style" href="/"><img
-                            src="Assets/enfamama-action-btn.png" width="91%" />
+                            src="Assets/enfamama-action-btn.png" width="91%" alt="action button"/>
                         </a>
                     </div>
                 </div>
