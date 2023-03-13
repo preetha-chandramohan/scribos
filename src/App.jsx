@@ -54,7 +54,6 @@ function App({ userLocaleX }) {
   const [logs] = useState("");
   const country = useUserCoutry();
   console.log(country)
-  const checkMY = () => region === MALAYSIA ? true : false;
 
   useEffect(() => {
     setUserLocale(userLocaleX.substring(0, 2).toLowerCase());
@@ -192,7 +191,7 @@ function App({ userLocaleX }) {
                 onClick={handleLangPick}
               />
             </LangageContainer>
-            {show && region == MALAYSIA && <Scribos />}
+            {show && region === MALAYSIA && <Scribos />}
             {!show && <div>
               <Logo region={region} />
               <Texts />
