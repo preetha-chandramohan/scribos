@@ -68,7 +68,7 @@ function App() {
     <div className="app">
       <div className="header">BRAND</div>
       <div className="content">
-        {error && <Error error={error} />}
+        {error != null && <Error error={error} />}
         {!error && !result && <div id="valigate" className="valigate"></div>}
         {result && <Result result={result} />}
       </div>

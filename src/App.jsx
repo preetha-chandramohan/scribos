@@ -49,6 +49,7 @@ function App({ userLocaleX }) {
   const [listOfLang, setListOfLang] = useState([]);
   const [region, setRegion] = useState("Select");
   const [short, setShort] = useState("EN");
+  const [show, setShow] = useState(false);
 
   const [logs] = useState("");
   const country = useUserCoutry();
@@ -62,26 +63,31 @@ function App({ userLocaleX }) {
 
   useEffect(() => {
     if (userLocale === "id" || userRegion === "id") {
+      setShow(false);
       setShort("ID");
       setCurrentAppLocale(AppLocale[userLocale]);
       setRegion(INDONESIA);
       setListOfLang([]);
     } else if (userLocale === "vi" || userRegion === "vn") {
+      setShow(false);
       setShort("VI");
       setCurrentAppLocale(AppLocale[userLocale]);
       setRegion(VIETNAM);
       setListOfLang([]);
     } else if (userLocale === "th" || userRegion === "th") {
+      setShow(false);
       setShort("TH");
       setCurrentAppLocale(AppLocale[userLocale]);
       setRegion(THAILAND);
       setListOfLang([]);
     } else if (userLocale === "ms" || userRegion === "my") {
+      setShow(true);
       setShort("EN");
       setCurrentAppLocale(AppLocale[userLocale]);
       setRegion(MALAYSIA);
       setListOfLang(["EN", "MS"]);
     } else if (userLocale === "en" || userRegion === "ph") {
+      setShow(false);
       setShort("EN");
       setCurrentAppLocale(AppLocale["phEn"]);
       setRegion("Philippines");
@@ -124,26 +130,31 @@ function App({ userLocaleX }) {
   const handleChangeUserLocale = (lang) => {
     setRegion(lang);
     if (lang === MALAYSIA) {
+      setShow(true);
       logEvent(analytics, "trust_lp_my_chosen");
       setCurrentAppLocale(AppLocale["ms"]);
       setShort("MS");
       setListOfLang(["EN", "MS"]);
     } else if (lang === INDONESIA) {
+      setShow(false);
       logEvent(analytics, "trust_lp_id_chosen");
       setCurrentAppLocale(AppLocale["id"]);
       setShort("ID");
       setListOfLang([]);
     } else if (lang === THAILAND) {
+      setShow(false);
       logEvent(analytics, "trust_lp_th_chosen");
       setCurrentAppLocale(AppLocale["th"]);
       setShort("TH");
       setListOfLang([]);
     } else if (lang === "Philippines") {
+      setShow(false);
       logEvent(analytics, "trust_lp_ph_chosen");
       setCurrentAppLocale(AppLocale["phEn"]);
       setShort("EN");
       setListOfLang([]);
     } else {
+      setShow(false);
       logEvent(analytics, "trust_lp_vi_chosen");
       setCurrentAppLocale(AppLocale["vi"]);
       setShort("VN");
@@ -153,7 +164,6 @@ function App({ userLocaleX }) {
 
   return (
     <LocaleContext.Provider value={userLocale}>
-
       <IntlProvider
         locale={currentAppLocale.locale}
         messages={currentAppLocale.messages}
@@ -182,12 +192,12 @@ function App({ userLocaleX }) {
                 onClick={handleLangPick}
               />
             </LangageContainer>
-            {checkMY() && <Scribos/>}
-            {!(checkMY()) && <div>
+            {show && region == MALAYSIA && <Scribos />}
+            {!show && <div>
               <Logo region={region} />
               <Texts />
             </div>}
-            {!(checkMY()) && <Download region={region} isIOS={isIOS} isMobile={isMobile} />}
+            {!show && <Download region={region} isIOS={isIOS} isMobile={isMobile} />}
             <div dangerouslySetInnerHTML={{ __html: logs }}></div>
             <br />
           </Background>

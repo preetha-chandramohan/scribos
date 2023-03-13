@@ -46,8 +46,16 @@ export const Result = ({ result }) => {
             </p>
           ))} */}
       </div>
-      {result.attributes && <MalaysiaUI result={result.attributes}/>}
-      {result.attributes && <MalaysiaStageUI result={result.attributes}/>}
+      {
+        result.attributes &&
+        result.attributes.rfxcel_product_name.values[0].value.toUpperCase().includes('ENFALAC') &&
+        <MalaysiaUI result={result.attributes}/>
+      }
+      {
+        result.attributes &&
+        result.attributes.rfxcel_product_name.values[0].value.toUpperCase().includes('ENFAGROW') &&
+        result.attributes && <MalaysiaStageUI result={result.attributes}/>
+      }
     </div>
   );
 };
