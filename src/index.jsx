@@ -7,7 +7,6 @@ import { initializeApp } from "firebase/app";
 import getUserLocale from "get-user-locale";
 import * as serviceWorker from "./serviceWorker";
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyBTLfxvzpgrKPRZkizqZLC4tSqPC60Fhog",
   authDomain: "enfamobileapp.firebaseapp.com",
@@ -30,8 +29,8 @@ logEvent(analytics, "trust_lp_opened");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {console.log(getUserLocale())}
     <App userLocaleX={getUserLocale()} />
+    {/* <NSForm/> */}
   </React.StrictMode>
 );
 

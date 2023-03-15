@@ -1,10 +1,8 @@
 @font-face {
   font-family: 'AvantGarde LT';
-  src: url('Fonts/AvantGardeLT-Medium.eot');
-  src: url('Fonts/AvantGardeLT-Medium.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/AvantGardeLT-Medium.woff2') format('woff2'),
-      url('Fonts/AvantGardeLT-Medium.woff') format('woff'),
-      url('Fonts/AvantGardeLT-Medium.ttf') format('truetype');
+  src: url('Fonts/AvantGardeLT-Medium.woff2') format('woff2'),
+    url('Fonts/AvantGardeLT-Medium.woff') format('woff'),
+    url('Fonts/AvantGardeLT-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -12,264 +10,30 @@
 
 @font-face {
   font-family: 'AvantGarde LT';
-  src: url('Fonts/AvantGardeLT-Bold.eot');
-  src: url('Fonts/AvantGardeLT-Bold.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/AvantGardeLT-Bold.woff2') format('woff2'),
-      url('Fonts/AvantGardeLT-Bold.woff') format('woff'),
-      url('Fonts/AvantGardeLT-Bold.ttf') format('truetype');
+  src:url('Fonts/AvantGardeLT-Bold.woff2') format('woff2'),
+    url('Fonts/AvantGardeLT-Bold.woff') format('woff'),
+    url('Fonts/AvantGardeLT-Bold.ttf') format('truetype');
   font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Pro Bk';
-  src: url('Fonts/ITCAvantGardePro-Bk.eot');
-  src: url('Fonts/ITCAvantGardePro-Bk.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardePro-Bk.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardePro-Bk.woff') format('woff'),
-      url('Fonts/ITCAvantGardePro-Bk.ttf') format('truetype');
-  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'ITC Avant Garde Gothic Std Demi';
-  src: url('Fonts/ITCAvantGardeStd-Demi.eot');
-  src: url('Fonts/ITCAvantGardeStd-Demi.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-Demi.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-Demi.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-Demi.ttf') format('truetype');
+  src:url('Fonts/ITCAvantGardeStd-Demi.woff2') format('woff2'),
+    url('Fonts/ITCAvantGardeStd-Demi.woff') format('woff'),
+    url('Fonts/ITCAvantGardeStd-Demi.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-BoldCnObl.eot');
-  src: url('Fonts/ITCAvantGardeStd-BoldCnObl.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-BoldCnObl.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-BoldCnObl.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-BoldCnObl.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-BoldObl.eot');
-  src: url('Fonts/ITCAvantGardeStd-BoldObl.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-BoldObl.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-BoldObl.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-BoldObl.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std Book Condensed';
-  src: url('Fonts/ITCAvantGardeStd-BkCn.eot');
-  src: url('Fonts/ITCAvantGardeStd-BkCn.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-BkCn.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-BkCn.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-BkCn.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-BkObl.eot');
-  src: url('Fonts/ITCAvantGardeStd-BkObl.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-BkObl.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-BkObl.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-BkObl.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std Book';
-  src: url('Fonts/ITCAvantGardeStd-Bk.eot');
-  src: url('Fonts/ITCAvantGardeStd-Bk.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-Bk.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-Bk.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-Bold.eot');
-  src: url('Fonts/ITCAvantGardeStd-Bold.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-Bold.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-Bold.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std Bold Condensed';
-  src: url('Fonts/ITCAvantGardeStd-BoldCn.eot');
-  src: url('Fonts/ITCAvantGardeStd-BoldCn.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-BoldCn.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-BoldCn.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-BoldCn.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-BkCnObl.eot');
-  src: url('Fonts/ITCAvantGardeStd-BkCnObl.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-BkCnObl.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-BkCnObl.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-BkCnObl.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std Medium Condensed';
-  src: url('Fonts/ITCAvantGardeStd-MdCn.eot');
-  src: url('Fonts/ITCAvantGardeStd-MdCn.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-MdCn.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-MdCn.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-MdCn.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std Extra';
-  src: url('Fonts/ITCAvantGardeStd-XLt.eot');
-  src: url('Fonts/ITCAvantGardeStd-XLt.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-XLt.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-XLt.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-XLt.ttf') format('truetype');
+  font-family: 'ITC Avant Garde Pro Bk';
+  src:url('Fonts/ITCAvantGardePro-Bk.woff2') format('woff2'),
+    url('Fonts/ITCAvantGardePro-Bk.woff') format('woff'),
+    url('Fonts/ITCAvantGardePro-Bk.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-MdCnObl.eot');
-  src: url('Fonts/ITCAvantGardeStd-MdCnObl.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-MdCnObl.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-MdCnObl.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-MdCnObl.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-Md.eot');
-  src: url('Fonts/ITCAvantGardeStd-Md.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-Md.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-Md.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-Md.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-DemiObl.eot');
-  src: url('Fonts/ITCAvantGardeStd-DemiObl.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-DemiObl.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-DemiObl.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-DemiObl.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std Demi Condensed';
-  src: url('Fonts/ITCAvantGardeStd-DemiCn.eot');
-  src: url('Fonts/ITCAvantGardeStd-DemiCn.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-DemiCn.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-DemiCn.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-DemiCn.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std Extra Light Condensed';
-  src: url('Fonts/ITCAvantGardeStd-XLtCn.eot');
-  src: url('Fonts/ITCAvantGardeStd-XLtCn.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-XLtCn.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-XLtCn.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-XLtCn.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-MdObl.eot');
-  src: url('Fonts/ITCAvantGardeStd-MdObl.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-MdObl.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-MdObl.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-MdObl.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-DemiCnObl.eot');
-  src: url('Fonts/ITCAvantGardeStd-DemiCnObl.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-DemiCnObl.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-DemiCnObl.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-DemiCnObl.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-XLtObl.eot');
-  src: url('Fonts/ITCAvantGardeStd-XLtObl.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-XLtObl.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-XLtObl.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-XLtObl.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ITC Avant Garde Gothic Std';
-  src: url('Fonts/ITCAvantGardeStd-XLtCnObl.eot');
-  src: url('Fonts/ITCAvantGardeStd-XLtCnObl.eot?#iefix') format('embedded-opentype'),
-      url('Fonts/ITCAvantGardeStd-XLtCnObl.woff2') format('woff2'),
-      url('Fonts/ITCAvantGardeStd-XLtCnObl.woff') format('woff'),
-      url('Fonts/ITCAvantGardeStd-XLtCnObl.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
   font-display: swap;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import "@scribos/valigate/dist/index.css";
 import "./Scribos.css";
 import en from "./i18n/en.json";
+import { NSForm } from "./NSForm";
 
 import {
   initialize,
@@ -16,6 +17,8 @@ import { Error } from "./Error";
 function App() {
   const [error, setError] = React.useState(null);
   const [result, setResult] = React.useState(null);
+  const [showNSForm, setShowNSForm] = React.useState(false);
+  // const [showValigate, setShowValigate] = React.useState(true);
 
   React.useEffect(() => {
     // adjust vertical height (handles mobile browsers)
@@ -51,12 +54,14 @@ function App() {
         break;
       case EExitCodes.REQUESTED_REPORT:
         console.log("REQUESTED_REPORT");
+        setShowNSForm(true);
         break;
       case EExitCodes.RESULT_REPORT:
         console.log("RESULT_REPORT", result);
         break;
       case EExitCodes.NON_VALIGATE_QR:
         console.log("NON_VALIGATE_QR", result);
+        setShowNSForm(true);
         break;
       default:
         setError(exitCode);
@@ -66,13 +71,15 @@ function App() {
 
   return (
     <div className="app">
-      <div className="header">BRAND</div>
+      <div className="header"></div>
       <div className="content">
         {error != null && <Error error={error} />}
-        {!error && !result && <div id="valigate" className="valigate"></div>}
+        {!error && !result && !showNSForm && <div id="valigate" className="valigate"></div>}
+        {showNSForm && <div className="form">
+          <NSForm />
+        </div>}
         {result && <Result result={result} />}
       </div>
-      {/* <div className="footer">© COMPANY 2022</div> */}
     </div>
   );
 }

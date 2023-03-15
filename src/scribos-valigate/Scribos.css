@@ -197,6 +197,7 @@
 
 .authentication-product__timeline {
   position: relative;
+  margin-top: 2%;
 }
 
 .authentication-product__timeline::after {
@@ -328,11 +329,13 @@
 .authentication-productstage__title {
   font-size: 12px;
   font-weight: 600;
+  margin: 0;
 }
 
 .authentication-productstage__value {
   font-size: 14px;
   font-weight: normal;
+  margin-top: 8%;
 }
 
 .authentication-productstages__scan-button {
@@ -393,4 +396,25 @@
   position: absolute;
   margin-top: -19%;
   left: 4%;
+}
+
+.authentication-productstages__scan-desc {
+  font-size: 10px;
+  padding: 0 5%;
+}
+
+.authentication-product-container h2, .authentication-product-container h3.authentication-product__scan-title, .authentication-product__scan-button-style, .authentication-productstages__name, .authentication-productstages__scan-button-style, .authentication-productstages__scan-title {
+  font-family: 'AvantGarde LT';
+}
+
+.authentication-product-container p, .authentication-productstages-container p {
+  font-family: 'ITC Avant Garde Gothic Std Demi';
+}
+
+.authentication-product-container h3, .authentication-productstage__value {
+  font-family: 'ITC Avant Garde Pro Bk';
+}
+
+.authentication-productstage__value {
+  font-weight: bold;
 }

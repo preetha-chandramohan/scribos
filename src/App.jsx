@@ -2,7 +2,7 @@ import { logEvent } from "firebase/analytics";
 import getUserLocale from "get-user-locale";
 import React, { useEffect, useState } from "react";
 import { isIOS, isMobile } from "react-device-detect";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { FormattedMessage, IntlProvider } from "react-intl";
 import { createGlobalStyle } from "styled-components";
 import AppLocale from "./helpers/AppLocale";
@@ -16,8 +16,6 @@ import { INDONESIA, MALAYSIA, THAILAND, VIETNAM } from "./helpers/const";
 import { analytics } from "./index";
 import Theme from "./helpers/theme";
 import Scribos from "./scribos-valigate/Scribos";
-console.log(AppLocale);
-
 
 
 export function useUserCoutry() {
@@ -50,10 +48,7 @@ function App({ userLocaleX }) {
   const [region, setRegion] = useState("Select");
   const [short, setShort] = useState("EN");
   const [show, setShow] = useState(false);
-
-  const [logs] = useState("");
   const country = useUserCoutry();
-  console.log(country)
 
   useEffect(() => {
     setUserLocale(userLocaleX.substring(0, 2).toLowerCase());
@@ -162,47 +157,48 @@ function App({ userLocaleX }) {
   };
 
   return (
-    <LocaleContext.Provider value={userLocale}>
-      <IntlProvider
-        locale={currentAppLocale.locale}
-        messages={currentAppLocale.messages}
-      >
-        <Theme>
-          <GlobalStyles />
-          <FormattedMessage id="general.text1">
-            {(title) => (
-              <Helmet>
-                <title>{title}</title>
-                <meta name="description" content="Trust" />
-              </Helmet>
-            )}
-          </FormattedMessage>
-          <Background>
-            <LangageContainer>
-              <DropDown
-                onClick={handleChangeUserLocale}
-                withFlag
-                region={region}
-                list={[MALAYSIA, INDONESIA, VIETNAM, THAILAND, "Philippines"]}
-              />
-              <DropDown
-                list={listOfLang}
-                region={short}
-                onClick={handleLangPick}
-              />
-            </LangageContainer>
-            {show && region === MALAYSIA && <Scribos />}
-            {!show && <div>
-              <Logo region={region} />
-              <Texts />
-            </div>}
-            {!show && <Download region={region} isIOS={isIOS} isMobile={isMobile} />}
-            <div dangerouslySetInnerHTML={{ __html: logs }}></div>
-            <br />
-          </Background>
-        </Theme>
-      </IntlProvider>
-    </LocaleContext.Provider>
+    <HelmetProvider>
+      <LocaleContext.Provider value={userLocale}>
+        <IntlProvider
+          locale={currentAppLocale.locale}
+          messages={currentAppLocale.messages}
+        >
+          <Theme>
+            <GlobalStyles />
+            <FormattedMessage id="general.text1">
+              {(title) => (
+                <Helmet>
+                  <title>{title}</title>
+                  <meta name="description" content="Trust" />
+                </Helmet>
+              )}
+            </FormattedMessage>
+            <Background>
+              <LangageContainer>
+                <DropDown
+                  onClick={handleChangeUserLocale}
+                  withFlag
+                  region={region}
+                  list={[MALAYSIA, INDONESIA, VIETNAM, THAILAND, "Philippines"]}
+                />
+                <DropDown
+                  list={listOfLang}
+                  region={short}
+                  onClick={handleLangPick}
+                />
+              </LangageContainer>
+              {show && region === MALAYSIA && <Scribos />}
+              {!show && <div>
+                <Logo region={region} />
+                <Texts />
+              </div>}
+              {!show && <Download region={region} isIOS={isIOS} isMobile={isMobile} />}
+              <br />
+            </Background>
+          </Theme>
+        </IntlProvider>
+      </LocaleContext.Provider>
+    </HelmetProvider>
   );
 }
 

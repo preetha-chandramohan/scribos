@@ -4,7 +4,7 @@ import "./Scribos.css";
 
 export const MalaysiaUI = ({ result }) => {
   return (
-    <div class="authentication-product-bg">
+    <div className="authentication-product-bg">
       <img src="Assets/authentication-product-background.png" width="100%" height="1400px" alt="background"/>
       <div className="authentication-product-container">
         <div className="authentication-product__backsection">
