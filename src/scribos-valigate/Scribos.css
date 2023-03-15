@@ -94,7 +94,23 @@
   color: white;
 }
 
-.authentication-product-bg {
+.authentication-product-container h2, .authentication-product-container h3.authentication-product__scan-title, .authentication-product__scan-button-style, .authentication-productstages__name, .authentication-productstages__scan-button-style, .authentication-productstages__scan-title {
+  font-family: 'AvantGarde LT';
+}
+
+.authentication-product-container p, .authentication-productstages-container p {
+  font-family: 'ITC Avant Garde Gothic Std Demi';
+}
+
+.authentication-product-container h3, .authentication-productstage__value {
+  font-family: 'ITC Avant Garde Pro Bk';
+}
+
+.authentication-productstage__value {
+  font-weight: bold;
+}
+
+.authentication-product-bg, .authentication-form-bg {
   position: relative;
 }
 
@@ -403,18 +419,75 @@
   padding: 0 5%;
 }
 
-.authentication-product-container h2, .authentication-product-container h3.authentication-product__scan-title, .authentication-product__scan-button-style, .authentication-productstages__name, .authentication-productstages__scan-button-style, .authentication-productstages__scan-title {
-  font-family: 'AvantGarde LT';
+/* Neative Scan Form */
+.authentication-form-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #103d8c;
+  margin: -5% 14% 15%;
 }
 
-.authentication-product-container p, .authentication-productstages-container p {
-  font-family: 'ITC Avant Garde Gothic Std Demi';
+form.negative-scan-form .form-field {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #0000003b;
+  margin-bottom: 2%;
 }
 
-.authentication-product-container h3, .authentication-productstage__value {
-  font-family: 'ITC Avant Garde Pro Bk';
+form.negative-scan-form .form-field label {
+  padding: 2%;
 }
 
-.authentication-productstage__value {
-  font-weight: bold;
+form.negative-scan-form .form-field input {
+  padding: 2%;
+  background: 0 0;
+  border: 1px solid #ccc;
+  height: 22px;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 5%;
+}
+
+form.negative-scan-form .form-field .error {
+  margin-bottom: 5%;
+}
+
+form.negative-scan-form .agree-checkbox {
+  margin: 10% 0;
+}
+
+button.form-skip {
+  border-radius: 20px;
+  color: #103d8c;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  max-width: 250px;
+  margin: 5% 5%;
+  width: 100%;
+  display: grid;
+  padding: 10px 0;
+  font-size: 18px;
+  justify-content: center;
+  border: 2px solid #103d8c;
+}
+
+button.form-submit {
+  border-radius: 20px;
+  color: #103d8c;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  max-width: 250px;
+  margin: 5% 5%;
+  width: 100%;
+  display: grid;
+  padding: 14px 0;
+  font-size: 18px;
+  background: #f5e096;
+  justify-content: center;
 }
