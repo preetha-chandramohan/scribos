@@ -12,7 +12,7 @@ export function NSForm({ sendReport }) {
           <p className="authentication-form__scan-desc">Please provide us more information to help us investigate the issue</p>
         </div>
         <Formik
-          initialValues={{ name: '', email: '', phone_number: '', shop_name: '', shop_city: '', shop_address: '', contact_agreement: false }}
+          initialValues={{ name: '', email: '', phone_number: '601', shop_name: '', shop_city: '', shop_address: '', contact_agreement: false }}
           validate={values => {
             const errors = {};
             if (!values.name || !/^[A-Za-z\s]*$/i.test(values.name)) {
@@ -59,7 +59,7 @@ export function NSForm({ sendReport }) {
               </div>              
               <div className="form-field field-mobile">
                 <label htmlFor="phone_number">Phone number</label>
-                <Field type="text" name="phone_number" placeholder="Type here" />
+                <Field type="text" name="phone_number" placeholder="Type here" maxlength="12" />
                 <ErrorMessage name="phone_number" component="div" className="error" />
               </div>              
               <div className="form-field field-shopname">
