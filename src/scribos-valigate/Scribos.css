@@ -94,38 +94,7 @@
   color: white;
 }
 
-.authentication-product-container h2,
-.authentication-product-container h3.authentication-product__scan-title,
-.authentication-product__scan-button-style,
-.authentication-productstages__name,
-.authentication-productstages__scan-button-style,
-.authentication-productstages__scan-title,
-.authentication-form__scan-title,
-.authentication-form-container p,
-button.form-submit,
-button.form-skip,
-.authentication-product__backsection-content {
-  font-family: 'AvantGarde LT';
-}
-
-.authentication-product-container p,
-.authentication-productstages-container p,
-.authentication-form-container label,
-.authentication-form-container input {
-  font-family: 'ITC Avant Garde Gothic Std Demi';
-}
-
-.authentication-product-container h3,
-.authentication-productstage__value {
-  font-family: 'ITC Avant Garde Pro Bk';
-}
-
-.authentication-productstage__value {
-  font-weight: bold;
-}
-
-.authentication-product-bg,
-.authentication-form-bg {
+.authentication-product-bg {
   position: relative;
 }
 
@@ -434,102 +403,18 @@ button.form-skip,
   padding: 0 5%;
 }
 
-/* Neative Scan Form */
-.authentication-form-container {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #103d8c;
-  margin: 5% 11% 5%;
+.authentication-product-container h2, .authentication-product-container h3.authentication-product__scan-title, .authentication-product__scan-button-style, .authentication-productstages__name, .authentication-productstages__scan-button-style, .authentication-productstages__scan-title {
+  font-family: 'AvantGarde LT';
 }
 
-.authentication-form__scan-process {
-  text-align: center;
-  margin-bottom: 15%;
+.authentication-product-container p, .authentication-productstages-container p {
+  font-family: 'ITC Avant Garde Gothic Std Demi';
 }
 
-form.negative-scan-form .form-field {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 2px solid #00000024;
-  margin-bottom: 2%;
+.authentication-product-container h3, .authentication-productstage__value {
+  font-family: 'ITC Avant Garde Pro Bk';
 }
 
-form.negative-scan-form .form-field label {
-  padding: 2%;
-}
-
-form.negative-scan-form .form-field input {
-  padding: 2%;
-  background: 0 0;
-  border: none;
-  height: 22px;
-  border-radius: 4px;
-  box-shadow: none;
-  font-size: 14px;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 5%;
-}
-
-form.negative-scan-form .form-field input:focus {
-  outline: none;
-}
-
-form.negative-scan-form .form-field .error {
-  margin-bottom: 5%;
-}
-
-form.negative-scan-form .agree-checkbox {
-  margin: 10% 0;
-  padding: 0 5%;
-  font-size: 13px;
-  text-align: justify;
-}
-
-button.form-skip {
-  border-radius: 15px;
-  color: #103d8c;
-  text-decoration: none;
-  font-weight: 700;
-  text-align: center;
-  max-width: 250px;
-  margin: 5% 5%;
-  width: 100%;
-  display: grid;
-  padding: 10px 0;
-  font-size: 16px;
-  justify-content: center;
-  border: 2px solid #103d8c;
-}
-
-button.form-submit {
-  border-radius: 15px;
-  color: #103d8c;
-  text-decoration: none;
-  font-weight: 700;
-  text-align: center;
-  max-width: 250px;
-  margin: 5% 5%;
-  width: 100%;
-  display: grid;
-  padding: 10px 0;
-  font-size: 16px;
-  background: #f5e096;
-  justify-content: center;
-}
-
-form.negative-scan-form .form-field label,
-form.negative-scan-form .form-field input,
-form.negative-scan-form .form-field .error {
-  padding-left: 5%;
-}
-
-.authentication-form-container .authentication-product__backsection {
-  margin-top: -199%;
-}
-
-.authentication-form__scan-desc {
-  font-size: 14px;
-  padding: 0 5%;
+.authentication-productstage__value {
+  font-weight: bold;
 }
