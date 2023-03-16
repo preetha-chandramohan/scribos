@@ -104,14 +104,17 @@
 .authentication-form-container p,
 button.form-submit,
 button.form-skip,
-.authentication-product__backsection-content {
+.authentication-product__backsection-content,
+.authentication-thankyou-container h3,
+.authentication-thankyou-container .form-skip {
   font-family: 'AvantGarde LT';
 }
 
 .authentication-product-container p,
 .authentication-productstages-container p,
 .authentication-form-container label,
-.authentication-form-container input {
+.authentication-form-container input,
+.authentication-thankyou-container p {
   font-family: 'ITC Avant Garde Gothic Std Demi';
 }
 
@@ -125,7 +128,8 @@ button.form-skip,
 }
 
 .authentication-product-bg,
-.authentication-form-bg {
+.authentication-form-bg,
+.authentication-thankyou-bg {
   position: relative;
 }
 
@@ -477,7 +481,8 @@ form.negative-scan-form .form-field input:focus {
 }
 
 form.negative-scan-form .form-field .error {
-  margin-bottom: 5%;
+  color: #a94442;
+  font-size: 10px;
 }
 
 form.negative-scan-form .agree-checkbox {
@@ -487,7 +492,7 @@ form.negative-scan-form .agree-checkbox {
   text-align: justify;
 }
 
-button.form-skip {
+.form-skip {
   border-radius: 15px;
   color: #103d8c;
   text-decoration: none;
@@ -532,4 +537,27 @@ form.negative-scan-form .form-field .error {
 .authentication-form__scan-desc {
   font-size: 14px;
   padding: 0 5%;
+}
+
+.authentication-thankyou-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #103d8c;
+  margin: -7% 11% 5%;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.authentication-thankyou-container .authentication-product__backsection {
+  top: -90%;
+  margin-top: auto;
+}
+
+.authentication-thankyou-container .form-skip {
+  margin: auto;
+}
+
+button.form-submit:focus, button.form-submit:active {
+  border: 2px solid #103d8c;
 }

@@ -6,8 +6,12 @@ export function NSForm({ sendReport }) {
     <div className="authentication-form-bg">
       <img src="Assets/authentication-product-background.png" width="100%" height="1230px" alt="background" />
       <div className="authentication-form-container">
+        <div className="authentication-product__backsection">
+          <p className="authentication-product__backsection-icon"><a href="/"><img src="Assets/consumer-arrow-s1.png" width="20px" alt="backsection" /></a></p>
+          <h3 className="authentication-product__backsection-content">CONSUMER PROTECTION</h3>
+        </div>
         <div className="authentication-form__scan-process">
-          <img src="Assets/authentication-scan.png" alt="Product Scan" width="25%" />
+          <img src="Assets/authentication-scan.png" alt="Product Scan" width="20%" />
           <h3 className="authentication-form__scan-title">Unable to authenticate product label</h3>
           <p className="authentication-form__scan-desc">Please provide us more information to help us investigate the issue</p>
         </div>
@@ -56,41 +60,42 @@ export function NSForm({ sendReport }) {
                 <label htmlFor="email">Email</label>
                 <Field type="email" name="email" placeholder="Type here" />
                 <ErrorMessage name="email" component="div" className="error" />
-              </div>              
+              </div>
               <div className="form-field field-mobile">
                 <label htmlFor="phone_number">Phone number</label>
                 <Field type="text" name="phone_number" placeholder="Type here" maxlength="12" />
                 <ErrorMessage name="phone_number" component="div" className="error" />
-              </div>              
+              </div>
               <div className="form-field field-shopname">
                 <label htmlFor="shop_name">Shop name</label>
                 <Field type="text" name="shop_name" placeholder="Type here" />
                 <ErrorMessage name="shop_name" component="div" className="error" />
-              </div>              
+              </div>
               <div className="form-field field-city">
                 <label htmlFor="shop_city">Shop city</label>
                 <Field type="text" name="shop_city" placeholder="Type here" />
                 <ErrorMessage name="shop_city" component="div" className="error" />
-              </div>              
+              </div>
               <div className="form-field field-address">
                 <label htmlFor="shop_address">Shop address</label>
                 <Field type="text" name="shop_address" placeholder="Type here" />
                 <ErrorMessage name="shop_address" component="div" className="error" />
-              </div>              
+              </div>
               <div className="agree-checkbox">
                 <label>
                   <Field type="checkbox" name="contact_agreement" />
                   {`I agree to provide my personal data to RB and allow to contact me in order to check details about the product I scanned. Both to help the investigation process`}
                 </label>
                 <ErrorMessage name="contact_agreement" component="div" className="error" />
-              </div>              
+              </div>
               <button type="submit" className="form-submit" disabled={isSubmitting}>
                 Take a photo and send
               </button>
             </Form>
           )}
         </Formik>
-        <button className="form-skip">Skip</button>
+        <a className="form-skip" href="/">Skip
+        </a>
       </div>
     </div>
   );
