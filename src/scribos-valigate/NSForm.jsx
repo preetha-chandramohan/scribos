@@ -15,13 +15,13 @@ export function NSForm({ sendReport }) {
           initialValues={{ name: '', email: '', phone_number: '', shop_name: '', shop_city: '', shop_address: '', contact_agreement: false }}
           validate={values => {
             const errors = {};
-            if (!values.name || !/^[A-Za-z\s]*$/.test(values.name)) {
+            if (!values.name || !/^[A-Za-z\s]*$/i.test(values.name)) {
               errors.name = 'Please enter your name';
             }
             if (!values.email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
               errors.email = 'Please enter a valid email address';
             }
-            if (!values.phone_number) {
+            if (!values.phone_number || !/^601[0-9]{8,9}$/i.test(values.phone_number)) {
               errors.phone_number = 'Please enter a valid phone number';
             }
             if (!values.shop_name) {
