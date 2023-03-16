@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import logoid from "../helpers/svgs/logoid.svg";
-import logomy from "../helpers/svgs/logomy.svg";
-import logoph from "../helpers/svgs/logoph.svg";
-import logoth from "../helpers/svgs/logoth.svg";
-import logovi from "../helpers/svgs/logovi.svg";
 import { INDONESIA, MALAYSIA, THAILAND, VIETNAM } from "../helpers/const";
+
+const logoid = process.env.PUBLIC_URL + '/Assets/svg/logoid.svg';
+const logomy = process.env.PUBLIC_URL + '/Assets/svg/logomy.svg';
+const logoph = process.env.PUBLIC_URL + '/Assets/svg/logoph.svg';
+const logoth = process.env.PUBLIC_URL + '/Assets/svg/logoth.svg';
+const logovi = process.env.PUBLIC_URL + '/Assets/svg/logovi.svg';
+
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;

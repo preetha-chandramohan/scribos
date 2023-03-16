@@ -3,12 +3,14 @@ import "@scribos/valigate/dist/index.css";
 import "./Scribos.css";
 import en from "./i18n/en.json";
 import { NSForm } from "./NSForm";
+import { NSThanks } from "./NSThanks";
 
 import {
   initialize,
   scan,
   onResultReceived,
   EExitCodes,
+  report
 } from "@scribos/valigate";
 
 import { Result } from "./Result";
@@ -18,7 +20,7 @@ function App() {
   const [error, setError] = React.useState(null);
   const [result, setResult] = React.useState(null);
   const [showNSForm, setShowNSForm] = React.useState(false);
-  // const [showValigate, setShowValigate] = React.useState(true);
+  const [showThanks, setShowThanks] = React.useState(false);
 
   React.useEffect(() => {
     // adjust vertical height (handles mobile browsers)
@@ -53,19 +55,38 @@ function App() {
         }
         break;
       case EExitCodes.REQUESTED_REPORT:
-        console.log("REQUESTED_REPORT");
         setShowNSForm(true);
+        console.log("RESULT_REPORT", result);
+        console.log("ExitCodes", exitCode);
         break;
       case EExitCodes.RESULT_REPORT:
+        alert(JSON.stringify(result, null, 2));
+        if(result.REPORT_STATUS && result.REPORT_STATUS === 'success'){
+          setShowThanks(true);
+          setShowNSForm(false);
+        }
         console.log("RESULT_REPORT", result);
+        console.log("ExitCodes", exitCode);
         break;
       case EExitCodes.NON_VALIGATE_QR:
-        console.log("NON_VALIGATE_QR", result);
         setShowNSForm(true);
+        console.log("NON_VALIGATE_QR", result);
+        console.log("ExitCodes", exitCode);
         break;
       default:
         setError(exitCode);
         break;
+    }
+  }
+
+  const sendReport = (data) => {
+    console.log(data);
+    const reportData = {
+      "fields": data,
+      "images": [],
+    }
+    if(data && reportData){
+      report(reportData).then((value) => console.log(value));
     }
   }
 
@@ -74,9 +95,12 @@ function App() {
       <div className="header"></div>
       <div className="content">
         {error != null && <Error error={error} />}
-        {!error && !result && !showNSForm && <div id="valigate" className="valigate"></div>}
+        {!error && !result && !showNSForm && !showThanks && <div id="valigate" className="valigate"></div>}
         {showNSForm && <div className="form">
-          <NSForm />
+          <NSForm sendReport={sendReport}/>
+        </div>}
+        {showThanks && <div className="thankyou">
+          <NSThanks />
         </div>}
         {result && <Result result={result} />}
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import InjectMassage from "./IntlMessage";
+import { InjectMsg } from "../helpers/styled";
 
 const TextsContainer = styled.div`
   display: flex;
@@ -29,10 +29,10 @@ const Texts = () => {
   return (
     <TextsContainer>
       <FirstText>
-        <InjectMassage id="general.text1" />
+        <InjectMsg id="general.text1" />
       </FirstText>
       <SecondText>
-        <InjectMassage id="general.text2" />
+        <InjectMsg id="general.text2" />
       </SecondText>
     </TextsContainer>
   );

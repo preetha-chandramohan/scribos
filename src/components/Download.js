@@ -1,7 +1,6 @@
 import { logEvent } from "firebase/analytics";
 import React from "react";
 import styled from "styled-components";
-import appStore from "../helpers/svgs/AppStore.svg";
 import {
   ANDROID,
   ID_APPSTORE,
@@ -19,9 +18,11 @@ import {
   VI_APPSTORE,
   VI_GOOGLEPLAY,
 } from "../helpers/const";
-import googlePlay from "../helpers/svgs/googleplay.svg";
 import { analytics } from "../index";
-import InjectMassage from "./IntlMessage";
+import { InjectMsg } from "../helpers/styled";
+
+const googlePlay = process.env.PUBLIC_URL + '/Assets/svg/googleplay.svg';
+const appStore = process.env.PUBLIC_URL + '/Assets/svg/AppStore.svg';
 
 const DownloadContainer = styled.div`
   display: flex;
@@ -53,7 +54,6 @@ const Text = styled.p`
 const Download = ({ isMobile, isIOS, region }) => {
   const handleClickShop = (event, shop) => {
     event.preventDefault();
-
     var appleUrl;
     var googleUrl;
     switch (region) {
@@ -96,7 +96,7 @@ const Download = ({ isMobile, isIOS, region }) => {
   return (
     <DownloadContainer>
       <Text>
-        <InjectMassage id="general.text3" />
+        <InjectMsg id="general.text3" />
       </Text>
       {isMobile ? (
         isIOS ? (

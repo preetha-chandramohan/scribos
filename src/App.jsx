@@ -6,12 +6,12 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { FormattedMessage, IntlProvider } from "react-intl";
 import { createGlobalStyle } from "styled-components";
 import AppLocale from "./helpers/AppLocale";
-import Background from "./components/Background";
+import { Background } from "./helpers/styled";
 import Download from "./components/Download";
 import DropDown from "./components/Dropdown";
 import Logo from "./components/Logo";
 import Texts from "./components/Texts";
-import LangageContainer from "./components/Top";
+import { LangageContainer } from "./helpers/styled";
 import { INDONESIA, MALAYSIA, THAILAND, VIETNAM } from "./helpers/const";
 import { analytics } from "./index";
 import Theme from "./helpers/theme";
@@ -163,6 +163,9 @@ function App({ userLocaleX }) {
           locale={currentAppLocale.locale}
           messages={currentAppLocale.messages}
         >
+
+
+
           <Theme>
             <GlobalStyles />
             <FormattedMessage id="general.text1">
@@ -173,6 +176,7 @@ function App({ userLocaleX }) {
                 </Helmet>
               )}
             </FormattedMessage>
+
             <Background>
               <LangageContainer>
                 <DropDown

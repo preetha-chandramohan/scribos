@@ -1,7 +1,6 @@
 import * as React from "react";
 import "./Scribos.css";
 
-
 export const MalaysiaUI = ({ result }) => {
   return (
     <div className="authentication-product-bg">

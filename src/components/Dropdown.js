@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import arrow from "../helpers/svgs/arrow-down.svg";
 import {
   INDONESIA,
   MALAYSIA,
@@ -8,11 +7,13 @@ import {
   THAILAND,
   VIETNAM,
 } from "../helpers/const";
-import id_flag from "../helpers/svgs/id_flag.svg";
-import my_flag from "../helpers/svgs/my_flag.svg";
-import ph_flag from "../helpers/svgs/ph_flag.svg";
-import th_flag from "../helpers/svgs/th_flag.svg";
-import vi_flag from "../helpers/svgs/vi_flag.svg";
+
+const arrow = process.env.PUBLIC_URL + '/Assets/svg/arrow-down.svg';
+const id_flag = process.env.PUBLIC_URL + '/Assets/svg/id_flag.svg';
+const my_flag = process.env.PUBLIC_URL + '/Assets/svg/my_flag.svg';
+const ph_flag = process.env.PUBLIC_URL + '/Assets/svg/ph_flag.svg';
+const th_flag = process.env.PUBLIC_URL + '/Assets/svg/th_flag.svg';
+const vi_flag = process.env.PUBLIC_URL + '/Assets/svg/vi_flag.svg';
 
 const StyledLi = styled.li`
   float: left;
