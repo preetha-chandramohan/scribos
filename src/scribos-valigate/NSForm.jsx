@@ -86,7 +86,7 @@ export function NSForm({ sendReport }) {
               </div>
               <div className="form-field imagepicker">
                 <label htmlFor="avatar">Choose a profile picture:</label>
-                <Field type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" onChange={handleChange} />
+                <Field type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"/>
                 <ErrorMessage name="avatar" component="div" className="error" />
               </div>
               <div className="agree-checkbox">
