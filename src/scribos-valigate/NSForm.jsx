@@ -16,7 +16,7 @@ export function NSForm({ sendReport }) {
           <p className="authentication-form__scan-desc">Please provide us more information to help us investigate the issue</p>
         </div>
         <Formik
-          initialValues={{ name: '', email: '', phone_number: '601', shop_name: '', shop_city: '', shop_address: '', contact_agreement: false }}
+          initialValues={{ name: '', email: '', phone_number: '601', shop_name: '', shop_city: '', shop_address: '', avatar: '', contact_agreement: false }}
           validate={values => {
             const errors = {};
             if (!values.name || !/^[A-Za-z\s]*$/i.test(values.name)) {
@@ -37,13 +37,16 @@ export function NSForm({ sendReport }) {
             if (!values.shop_address) {
               errors.shop_address = 'Please enter shop address';
             }
+            if (!values.avatar) {
+              errors.avatar = 'Please upload Product Image';
+            }
             if (values.contact_agreement === false) {
               errors.contact_agreement = 'Acceptance required';
             }
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            const newValues = {contact_agreement : 'I agree'}
+            const newValues = { contact_agreement: 'I agree' }
             sendReport(Object.assign(values, newValues))
             console.log(JSON.stringify(values, null, 2));
             setSubmitting(false);
@@ -80,6 +83,11 @@ export function NSForm({ sendReport }) {
                 <label htmlFor="shop_address">Shop address</label>
                 <Field type="text" name="shop_address" placeholder="Type here" />
                 <ErrorMessage name="shop_address" component="div" className="error" />
+              </div>
+              <div className="form-field imagepicker">
+                <label htmlFor="avatar">Choose a profile picture:</label>
+                <Field type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" onChange={handleChange} />
+                <ErrorMessage name="avatar" component="div" className="error" />
               </div>
               <div className="agree-checkbox">
                 <label>
