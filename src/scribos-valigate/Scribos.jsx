@@ -79,11 +79,12 @@ function App() {
     }
   }
 
-  const sendReport = (data) => {
+  const sendReport = (data, fileList) => {
     console.log(data);
+    console.log(fileList);
     const reportData = {
       "fields": data,
-      "images": [],
+      "images": fileList,
     }
     if(data && reportData){
       report(reportData).then((value) => console.log(value));

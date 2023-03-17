@@ -1,7 +1,31 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
+function Thumbnail({ file }){
+  const [loading, setLoding] = React.useState(false);
+  const [thumbnail, setThumbnail] = React.useState(undefined);
+  React.useMemo(() => {
+    if (!file) { return; }
+    console.log("img updated");
+    setLoding(true);
+    let reader = new FileReader();
+      reader.onloadend = () => {
+        setLoding(false);
+        setThumbnail(reader.result)
+      };
+      reader.readAsDataURL(file);
+  },[file]);
+  if (!file) { return null; }
+  if (loading) { return <p>loading...</p>; }
+  return (<img src={thumbnail}
+    alt={file.name}
+    className="img-thumbnail mt-2"
+    height={200}
+    width={200} />);
+}
+
 export function NSForm({ sendReport }) {
+  const [fileList, setFileList] = React.useState(null)
   return (
     <div className="authentication-form-bg">
       <img src="Assets/authentication-product-background.png" width="100%" height="1230px" alt="background" />
@@ -16,7 +40,7 @@ export function NSForm({ sendReport }) {
           <p className="authentication-form__scan-desc">Please provide us more information to help us investigate the issue</p>
         </div>
         <Formik
-          initialValues={{ name: '', email: '', phone_number: '601', shop_name: '', shop_city: '', shop_address: '', avatar: '', contact_agreement: false }}
+          initialValues={{ name: '', email: '', phone_number: '601', shop_name: '', shop_city: '', shop_address: '', contact_agreement: false }}
           validate={values => {
             const errors = {};
             if (!values.name || !/^[A-Za-z\s]*$/i.test(values.name)) {
@@ -37,8 +61,11 @@ export function NSForm({ sendReport }) {
             if (!values.shop_address) {
               errors.shop_address = 'Please enter shop address';
             }
-            if (!values.avatar) {
+            if (!values.file) {
               errors.avatar = 'Please upload Product Image';
+            }
+            if (values.file?.size >= 2000000) {
+              errors.avatar = 'Please upload Product Image less than 2MB';
             }
             if (values.contact_agreement === false) {
               errors.contact_agreement = 'Acceptance required';
@@ -46,13 +73,15 @@ export function NSForm({ sendReport }) {
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
+            console.log(values);
+            console.log(fileList);
             const newValues = { contact_agreement: 'I agree' }
-            sendReport(Object.assign(values, newValues))
+            sendReport(Object.assign(values, newValues), fileList)
             console.log(JSON.stringify(values, null, 2));
             setSubmitting(false);
           }}
         >
-          {({ isSubmitting }) => (
+          {({ isSubmitting, setFieldValue, values }) => (
             <Form className="negative-scan-form">
               <div className="form-field field-name">
                 <label htmlFor="name">Your Name</label>
@@ -66,7 +95,7 @@ export function NSForm({ sendReport }) {
               </div>
               <div className="form-field field-mobile">
                 <label htmlFor="phone_number">Phone number</label>
-                <Field type="text" name="phone_number" placeholder="Type here" maxlength="12" />
+                <Field type="text" name="phone_number" placeholder="Type here" maxLength="12" />
                 <ErrorMessage name="phone_number" component="div" className="error" />
               </div>
               <div className="form-field field-shopname">
@@ -85,10 +114,19 @@ export function NSForm({ sendReport }) {
                 <ErrorMessage name="shop_address" component="div" className="error" />
               </div>
               <div className="form-field imagepicker">
-                <label htmlFor="avatar">Choose a profile picture:</label>
-                <Field type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"/>
+                <label htmlFor="avatar">Upload the product picture</label>
+                <Field type="file" id="avatar" name="avatar" accept="image/*" onChange={(event) => {
+                  setFieldValue("file", event.currentTarget.files[0]);
+                  console.log(event.currentTarget.files[0]);
+                  let files = event.target.files;
+                  if (files.length > 0) {
+                    setFileList(files)
+                    console.log(files);
+                  }
+                }}/>
                 <ErrorMessage name="avatar" component="div" className="error" />
               </div>
+              <Thumbnail file={values.file} />
               <div className="agree-checkbox">
                 <label>
                   <Field type="checkbox" name="contact_agreement" />
