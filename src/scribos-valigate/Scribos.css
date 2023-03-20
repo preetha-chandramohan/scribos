@@ -480,7 +480,7 @@ form.negative-scan-form .form-field input:focus {
   outline: none;
 }
 
-form.negative-scan-form .form-field .error {
+form.negative-scan-form .form-field .error, form.negative-scan-form .agree-checkbox .error {
   color: #a94442;
   font-size: 10px;
 }
@@ -531,7 +531,8 @@ form.negative-scan-form .form-field .error {
 }
 
 .authentication-form-container .authentication-product__backsection {
-  margin-top: -199%;
+  margin-top: -228%;
+  width: 132%;
 }
 
 .authentication-form__scan-desc {
@@ -558,6 +559,22 @@ form.negative-scan-form .form-field .error {
   margin: auto;
 }
 
-button.form-submit:focus, button.form-submit:active {
+button.form-submit:focus,
+button.form-submit:active {
   border: 2px solid #103d8c;
+}
+
+form.negative-scan-form .form-field {
+  position: relative;
+}
+
+form.negative-scan-form .form-field .error {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 10%;
+}
+
+form.negative-scan-form {
+  padding-right: 3%;
 }

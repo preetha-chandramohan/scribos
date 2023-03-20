@@ -20,15 +20,15 @@ function Thumbnail({ file }){
   return (<img src={thumbnail}
     alt={file.name}
     className="img-thumbnail mt-2"
-    height={200}
-    width={200} />);
+    height={150}
+    width={150} />);
 }
 
 export function NSForm({ sendReport }) {
   const [fileList, setFileList] = React.useState(null)
   return (
     <div className="authentication-form-bg">
-      <img src="Assets/authentication-product-background.png" width="100%" height="1230px" alt="background" />
+      <img src="Assets/authentication-product-background.png" width="100%" height="1440px" alt="background" />
       <div className="authentication-form-container">
         <div className="authentication-product__backsection">
           <p className="authentication-product__backsection-icon"><a href="/"><img src="Assets/consumer-arrow-s1.png" width="20px" alt="backsection" /></a></p>
