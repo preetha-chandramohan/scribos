@@ -16,7 +16,7 @@ import {
 import { Result } from "./Result";
 import { Error } from "./Error";
 
-function App() {
+function Scribos() {
   const [error, setError] = React.useState(null);
   const [result, setResult] = React.useState(null);
   const [showNSForm, setShowNSForm] = React.useState(false);
@@ -50,6 +50,7 @@ function App() {
     switch (exitCode) {
       case EExitCodes.RESULT_SINGLE_SCAN:
         console.log("RESULT_SINGLE_SCAN", result);
+        console.log("ExitCodes", exitCode);
         if (result) {
           setResult(result.SCAN_RESULT);
         }
@@ -61,7 +62,7 @@ function App() {
         break;
       case EExitCodes.RESULT_REPORT:
         alert(JSON.stringify(result, null, 2));
-        if(result.REPORT_STATUS && result.REPORT_STATUS === 'success'){
+        if (result.REPORT_STATUS && result.REPORT_STATUS === 'success') {
           setShowThanks(true);
           setShowNSForm(false);
         }
@@ -80,14 +81,12 @@ function App() {
   }
 
   const sendReport = (data, fileList) => {
-    console.log(data);
-    console.log(fileList);
     const reportData = {
       "fields": data,
       "images": fileList,
     }
-    if(data && reportData){
-      report(reportData).then((value) => console.log(value));
+    if (data && reportData) {
+      report(reportData);
     }
   }
 
@@ -98,7 +97,7 @@ function App() {
         {error != null && <Error error={error} />}
         {!error && !result && !showNSForm && !showThanks && <div id="valigate" className="valigate"></div>}
         {showNSForm && <div className="form">
-          <NSForm sendReport={sendReport}/>
+          <NSForm sendReport={sendReport} />
         </div>}
         {showThanks && <div className="thankyou">
           <NSThanks />
@@ -109,4 +108,4 @@ function App() {
   );
 }
 
-export default App;
+export default Scribos;

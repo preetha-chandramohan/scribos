@@ -1,6 +1,5 @@
 import * as React from "react";
 
-
 const BlockScreen = ({ title, text }) => {
   return (
     <div className="block-screen">
@@ -11,7 +10,6 @@ const BlockScreen = ({ title, text }) => {
     </div>
   );
 };
-
 
 export const Error = ({ error }) => {
   return <BlockScreen text={error} />;

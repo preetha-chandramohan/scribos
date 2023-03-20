@@ -7,7 +7,9 @@ export const MalaysiaUI = ({ result }) => {
       <img src="Assets/authentication-product-background.png" width="100%" height="1400px" alt="background"/>
       <div className="authentication-product-container">
         <div className="authentication-product__backsection">
-          <p className="authentication-product__backsection-icon"><a href="/"><img src="Assets/consumer-arrow-s1.png" width="20px" alt="backsection"/></a></p>
+          <p className="authentication-product__backsection-icon">
+            <a href="/"><img src="Assets/consumer-arrow-s1.png" width="20px" alt="backsection"/></a>
+          </p>
           <h3 className="authentication-product__backsection-content">CONSUMER PROTECTION</h3>
         </div>
         <img src={`data:image/jpeg;base64,${result.rfxcel_product_image.values[0].value}`} alt="Production Date Icon" width="100%" />
@@ -45,13 +47,11 @@ export const MalaysiaUI = ({ result }) => {
         <div className="authentication-product__scan-process">
           <img className="authentication-product__scan-logo" src="Assets/authentication-scan.png" alt="Product Scan" />
           <h3 className="authentication-product__scan-title">Authentication system</h3>
-          <p className="authentication-product__scan-desc">Our authentication system is patented and the QR Code is unique
-            and cannot be duplicated. Any attempt to
-            duplicate the Qa code can be traced.
+          <p className="authentication-product__scan-desc">
+            Our authentication system is patented and the QR Code is unique and cannot be duplicated. Any attempt to duplicate the Qa code can be traced.
           </p>
           <div className="authentication-product__scan-button">
-            <a className="authentication-product__scan-button-style" href="/">Scan another Product
-            </a>
+            <a className="authentication-product__scan-button-style" href="/">Scan another Product</a>
           </div>
         </div>
       </div>

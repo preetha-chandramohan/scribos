@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-function Thumbnail({ file }){
+function Thumbnail({ file }) {
   const [loading, setLoding] = React.useState(false);
   const [thumbnail, setThumbnail] = React.useState(undefined);
   React.useMemo(() => {
@@ -9,12 +9,12 @@ function Thumbnail({ file }){
     console.log("img updated");
     setLoding(true);
     let reader = new FileReader();
-      reader.onloadend = () => {
-        setLoding(false);
-        setThumbnail(reader.result)
-      };
-      reader.readAsDataURL(file);
-  },[file]);
+    reader.onloadend = () => {
+      setLoding(false);
+      setThumbnail(reader.result)
+    };
+    reader.readAsDataURL(file);
+  }, [file]);
   if (!file) { return null; }
   if (loading) { return <p>loading...</p>; }
   return (<img src={thumbnail}
@@ -40,7 +40,7 @@ export function NSForm({ sendReport }) {
           <p className="authentication-form__scan-desc">Please provide us more information to help us investigate the issue</p>
         </div>
         <Formik
-          initialValues={{ name: '', email: '', phone_number: '601', shop_name: '', shop_city: '', shop_address: '', avatar:undefined , contact_agreement: false }}
+          initialValues={{ name: '', email: '', phone_number: '601', shop_name: '', shop_city: '', shop_address: '', avatar: undefined, contact_agreement: false }}
           validate={values => {
             const errors = {};
             if (!values.name || !/^[A-Za-z\s]*$/i.test(values.name)) {
@@ -123,7 +123,7 @@ export function NSForm({ sendReport }) {
                     setFileList(files)
                     console.log(files);
                   }
-                }}/>
+                }} />
                 <ErrorMessage name="avatar" component="div" className="error" />
               </div>
               <Thumbnail file={values.file} />

@@ -5,18 +5,16 @@ import { isIOS, isMobile } from "react-device-detect";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { FormattedMessage, IntlProvider } from "react-intl";
 import { createGlobalStyle } from "styled-components";
-import AppLocale from "./helpers/AppLocale";
-import { Background } from "./helpers/styled";
 import Download from "./components/Download";
 import DropDown from "./components/Dropdown";
 import Logo from "./components/Logo";
 import Texts from "./components/Texts";
-import { LangageContainer } from "./helpers/styled";
+import AppLocale from "./helpers/AppLocale";
 import { INDONESIA, MALAYSIA, THAILAND, VIETNAM } from "./helpers/const";
-import { analytics } from "./index";
+import { Background, LangageContainer } from "./helpers/styled";
 import Theme from "./helpers/theme";
+import { analytics } from "./index";
 import Scribos from "./scribos-valigate/Scribos";
-
 
 export function useUserCoutry() {
   const [country, setCountry] = useState("EN");
@@ -34,9 +32,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Avenir Next', sans-serif;
     background: ${(props) =>
     `radial-gradient(${props.theme.colors.mainGoldLight}, ${props.theme.colors.mainGold})`};
-  }
-  
-`;
+  }`;
 
 export const LocaleContext = React.createContext(getUserLocale());
 
