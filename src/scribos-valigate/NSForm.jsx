@@ -40,7 +40,7 @@ export function NSForm({ sendReport }) {
           <p className="authentication-form__scan-desc">Please provide us more information to help us investigate the issue</p>
         </div>
         <Formik
-          initialValues={{ name: '', email: '', phone_number: '601', shop_name: '', shop_city: '', shop_address: '', avatar:'', contact_agreement: false }}
+          initialValues={{ name: '', email: '', phone_number: '601', shop_name: '', shop_city: '', shop_address: '', avatar:undefined , contact_agreement: false }}
           validate={values => {
             const errors = {};
             if (!values.name || !/^[A-Za-z\s]*$/i.test(values.name)) {
