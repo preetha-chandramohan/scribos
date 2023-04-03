@@ -61,6 +61,7 @@ function Scribos() {
         console.log("ExitCodes", exitCode);
         break;
       case EExitCodes.RESULT_REPORT:
+        // alert(JSON.stringify(result, null, 2));
         if (result.REPORT_STATUS && result.REPORT_STATUS === 'success') {
           setShowThanks(true);
           setShowNSForm(false);

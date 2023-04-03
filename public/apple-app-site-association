@@ -3,7 +3,6 @@
       "details":[
          {
             "appIDs":[
-               "67AU7G4CTB.my.com.enfagrow.stage",
                "U5G65A9M2B.my.com.enfagrow",
                "U5G65A9M2B.id.co.enfa",
                "67AU7G4CTB.id.co.enfa.stage",
@@ -20,5 +19,10 @@
             ]
          }
       ]
+   },
+   "appclips": {
+       "apps": [
+         "U5G65A9M2B.my.enfagrow.trust.Clip"
+       ]
    }
 }
