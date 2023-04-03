@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
-import getUserLocale from "get-user-locale";
+// import getUserLocale from "get-user-locale";
 import * as serviceWorker from "./serviceWorker";
 
 const firebaseConfig = {
