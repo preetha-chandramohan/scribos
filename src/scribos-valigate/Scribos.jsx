@@ -92,7 +92,7 @@ function Scribos() {
 
   return (
     <div className="app">
-      <div className="header"></div>
+      {/* <div className="header"></div> */}
       <div className="content">
         {error != null && <Error error={error} />}
         {!error && !result && !showNSForm && !showThanks && <div id="valigate" className="valigate"></div>}
