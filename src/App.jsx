@@ -40,6 +40,7 @@ function App() {
       <Helmet>
         <title>Consumer protection</title>
         <meta name="description" content="Trust" />
+        <meta name="apple-itunes-app" content="app-id=6446016138, app-clip-bundle-id=my.enfagrow.trust.Clip, app-clip-display=card"></meta>
       </Helmet>
       <Theme>
         <GlobalStyles />
