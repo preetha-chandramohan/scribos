@@ -25,12 +25,22 @@ margin: 0px;`
 
 const BlockScreen = ({ title, text }) => {
   return (
-    <div className="block-screen">
-      {title && <div className="block-screen__title">{title}</div>}
-      <div className="block-screen__content">
-        <div className="block-screen__content-text">{text}</div>
-      </div>
-    </div>
+    <>
+      {console.log(text)}
+      {
+        text === 'UNSUPPORTED_BROWSER' && isIOS ?
+          <Container> 
+            <Title>Thank you for scanning</Title>
+            <Para>Please click “Open” button above to continue</Para>
+          </Container> :
+          <div className="block-screen">
+            {title && <div className="block-screen__title">{title}</div>}
+            <div className="block-screen__content">
+              <div className="block-screen__content-text">{text}</div>
+            </div>
+          </div>
+      }
+    </>
   );
 };
 
