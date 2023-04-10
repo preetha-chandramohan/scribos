@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { isIOS } from "react-device-detect";
 
 const Container = styled.div`
 display: flex;
@@ -27,8 +28,8 @@ const BlockScreen = ({ title, text }) => {
     <>
       {console.log(text)}
       {
-        text === 'UNSUPPORTED_BROWSER' ?
-          <Container>
+        text === 'UNSUPPORTED_BROWSER' && isIOS ?
+          <Container> 
             <Title>Thank you for scanning</Title>
             <Para>Please click “Open” button above to continue</Para>
           </Container> :
