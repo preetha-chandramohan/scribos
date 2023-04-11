@@ -1,7 +1,7 @@
 {
   "loadingModalText": "Checking compatibility ...",
   "loadingModalTitle": "Preparing your app",
-  "loadingProgressLabel": "Processing the ValiGate code ...",
+  "loadingProgressLabel": "Loading...",
   "permissionCameraScreenAction": "Continue",
   "permissionCameraScreenText": "In order to scan the ValiGate code, please grant access to your camera.",
   "permissionCameraScreenTitle": "We need access to your camera.",
