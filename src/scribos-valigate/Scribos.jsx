@@ -16,7 +16,7 @@ import {
 import { Result } from "./Result";
 import { Error } from "./Error";
 
-function Scribos() {
+function Scribos({short}) {
   const [error, setError] = React.useState(null);
   const [result, setResult] = React.useState(null);
   const [showNSForm, setShowNSForm] = React.useState(false);
@@ -94,7 +94,7 @@ function Scribos() {
     <div className="app">
       {/* <div className="header"></div> */}
       <div className="content">
-        {error != null && <Error error={error} />}
+        {error != null && <Error error={error} short={short}/>}
         {!error && !result && !showNSForm && !showThanks && <div id="valigate" className="valigate"></div>}
         {showNSForm && <div className="form">
           <NSForm sendReport={sendReport} />

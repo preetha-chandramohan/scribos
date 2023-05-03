@@ -23,15 +23,26 @@ color: rgb(30, 45, 105);
 font-size: 21px;
 margin: 0px;`
 
-const BlockScreen = ({ title, text }) => {
+const lang = {
+  MS : {
+    title: "Terima kasih untuk imbasan.",
+    subtitle: "Sila klik butang Buka di atas untuk meneruskan"
+  },
+  EN : {
+    title: "Thank you for scanning.",
+    subtitle: "Please click “Open” button above to continue"
+  }
+}
+
+const BlockScreen = ({ title, text, short }) => {
   return (
     <>
       {console.log(text)}
       {
         text === 'UNSUPPORTED_BROWSER' && isIOS ?
           <Container> 
-            <Title>Thank you for scanning</Title>
-            <Para>Please click “Open” button above to continue</Para>
+            <Title>{lang[short]['title']}</Title>
+            <Para>{lang[short]['subtitle']}</Para>
           </Container> :
           <div className="block-screen">
             {title && <div className="block-screen__title">{title}</div>}
@@ -44,6 +55,6 @@ const BlockScreen = ({ title, text }) => {
   );
 };
 
-export const Error = ({ error }) => {
-  return <BlockScreen text={error} />;
+export const Error = ({ error, short }) => {
+  return <BlockScreen text={error} short={short}/>;
 };
