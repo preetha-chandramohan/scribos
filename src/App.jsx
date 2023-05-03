@@ -1,5 +1,6 @@
 import getUserLocale from "get-user-locale";
 import React, { useEffect, useState } from "react";
+// import { isIOS, isMobile } from "react-device-detect";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { createGlobalStyle } from "styled-components";
 import { Background } from "./helpers/styled";
