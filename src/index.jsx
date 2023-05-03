@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
-// import getUserLocale from "get-user-locale";
+import getUserLocale from "get-user-locale";
 import * as serviceWorker from "./serviceWorker";
 
 const firebaseConfig = {
@@ -29,7 +29,7 @@ logEvent(analytics, "trust_lp_opened");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <App userLocaleX={getUserLocale()} />
   </React.StrictMode>
 );
 
