@@ -48,7 +48,7 @@ export const MalaysiaUI = ({ result }) => {
           <img className="authentication-product__scan-logo" src="Assets/authentication-scan.png" alt="Product Scan" />
           <h3 className="authentication-product__scan-title">Authentication system</h3>
           <p className="authentication-product__scan-desc">
-            Our authentication system is patented and the QR Code is unique and cannot be duplicated. Any attempt to duplicate the Qa code can be traced.
+            Our authentication system is patented and the QR Code is unique and cannot be duplicated. Any attempt to duplicate the QR code can be traced.
           </p>
           <div className="authentication-product__scan-button">
             <a className="authentication-product__scan-button-style" href="/">Scan another Product</a>
