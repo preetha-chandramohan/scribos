@@ -26,11 +26,13 @@ margin: 0px;`
 const lang = {
   MS : {
     title: "Terima kasih untuk imbasan.",
-    subtitle: "Sila klik butang Buka di atas untuk meneruskan"
+    subtitle: "Sila klik butang Buka di atas untuk meneruskan",
+    desc: 'Jika anda tidak dapat melihat butang “Buka” di atas, sila buka pautan ini <a href="https://qr.meadjohnson.com/" target="_blank">https://qr.meadjohnson.com</a> di pelayar Safari.'
   },
   EN : {
     title: "Thank you for scanning.",
-    subtitle: "Please click “Open” button above to continue"
+    subtitle: "Please click “Open” button above to continue",
+    desc: 'If you don\'t see the “Open” button at the top, please open this link <a href="https://qr.meadjohnson.com/" target="_blank">https://qr.meadjohnson.com</a> in Safari browser'
   }
 }
 
@@ -43,6 +45,7 @@ const BlockScreen = ({ title, text, short }) => {
           <Container> 
             <Title>{lang[short]['title']}</Title>
             <Para>{lang[short]['subtitle']}</Para>
+            <Para>{lang[short]['desc']}</Para>
           </Container> :
           <div className="block-screen">
             {title && <div className="block-screen__title">{title}</div>}
