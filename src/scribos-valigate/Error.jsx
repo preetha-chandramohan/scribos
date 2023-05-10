@@ -45,7 +45,7 @@ const BlockScreen = ({ title, text, short }) => {
           <Container> 
             <Title>{lang[short]['title']}</Title>
             <Para>{lang[short]['subtitle']}</Para>
-            <Para>{lang[short]['desc']}</Para>
+            <Para dangerouslySetInnerHTML={{__html: lang[short]['desc']}}></Para>
           </Container> :
           <div className="block-screen">
             {title && <div className="block-screen__title">{title}</div>}
