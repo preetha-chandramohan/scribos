@@ -41,7 +41,7 @@ const BlockScreen = ({ title, text, short }) => {
     <>
       {console.log(text)}
       {
-        text === 'UNSUPPORTED_BROWSER' && isIOS ?
+        text === 'UNSUPPORTED_APP_CLIP' && isIOS ?
           <Container> 
             <Title>{lang[short]['title']}</Title>
             <Para>{lang[short]['subtitle']}</Para>
