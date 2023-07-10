@@ -38,7 +38,8 @@ function Scribos({short}) {
     initialize(
       "valigate",
       // "<ENTER_THE_APP_ID_PROVIDED_BY_SCRIBOS_HERE>",
-      "MDJN_STAGE_R1TL9G5Q2LXK924DK7QV",
+      // "MDJN_STAGE_R1TL9G5Q2LXK924DK7QV",
+      "MDJN_PROD_476JR5HMS6GFJV73649K",
       `${process.env.PUBLIC_URL}/valigate/worker.f029c5c.js`,
       en
     );

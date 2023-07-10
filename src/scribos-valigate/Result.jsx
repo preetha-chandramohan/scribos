@@ -3,6 +3,7 @@ import { MalaysiaUI } from "./MalaysiaUI";
 import { MalaysiaStageUI } from "./MalaysiaStageUI";
 
 export const Result = ({ result }) => {
+  console.log(result);
   return (
     <div className="result">
       {
