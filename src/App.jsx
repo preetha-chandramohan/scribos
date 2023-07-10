@@ -79,7 +79,7 @@ function App({ userLocaleX }) {
       setRegion(MALAYSIA);
       setListOfLang(["EN", "MS"]);
     } else if (userLocale === "en" || userRegion === "ph") {
-      setShow(false);
+      setShow(true);
       setShort("EN");
       setCurrentAppLocale(AppLocale["phEn"]);
       setRegion("Philippines");
@@ -138,7 +138,7 @@ function App({ userLocaleX }) {
       setShort("TH");
       setListOfLang([]);
     } else if (lang === "Philippines") {
-      setShow(false);
+      setShow(true);
       logEvent(analytics, "trust_lp_ph_chosen");
       setCurrentAppLocale(AppLocale["phEn"]);
       setShort("EN");
@@ -185,7 +185,9 @@ function App({ userLocaleX }) {
                 />
               </LangageContainer>
               {console.log(short)}
-              {show && region === MALAYSIA && <Scribos short={short}/>}
+              {((show && region === MALAYSIA) || (show && region === "Philippines")) && <Scribos short={short}/>}
+              {console.log(region)}
+              {console.log(show)}
               {!show && <div>
                 <Logo region={region} />
                 <Texts />
