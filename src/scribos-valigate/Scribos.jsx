@@ -16,7 +16,7 @@ import {
 import { Result } from "./Result";
 import { Error } from "./Error";
 
-function Scribos({short}) {
+function Scribos({short, region}) {
   const [error, setError] = React.useState(null);
   const [result, setResult] = React.useState(null);
   const [showNSForm, setShowNSForm] = React.useState(false);
@@ -106,7 +106,7 @@ function Scribos({short}) {
         {showThanks && <div className="thankyou">
           <NSThanks />
         </div>}
-        {result && <Result result={result} />}
+        {result && <Result result={result} region={region}/>}
       </div>
     </div>
   );
