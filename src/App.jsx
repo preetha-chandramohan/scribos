@@ -187,8 +187,6 @@ function App({ userLocaleX }) {
               {console.log(short)}
               {(show && region === MALAYSIA) && <Scribos short={short} region={region}/>}
               {(show && region === "Philippines") && <Scribos short={short} region={region}/>}
-              {console.log(region)}
-              {console.log(show)}
               {!show && <div>
                 <Logo region={region} />
                 <Texts />
