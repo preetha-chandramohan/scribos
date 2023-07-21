@@ -67,7 +67,7 @@ export const MalaysiaStageUI = ({ result }) => {
                         <a className="authentication-productstages__scan-button-style" href="/">Scan another Product</a>
                     </div>
                     <div className="authentication-productstages__enfamama-button">
-                        <a className="authentication-productstages__enfamama-button-style" href="/">
+                        <a className="authentication-productstages__enfamama-button-style" href="https://www.enfagrow.com.my/user/enrollment">
                             <img src="Assets/enfamama-action-btn.png" width="91%" alt="action button" />
                         </a>
                     </div>
