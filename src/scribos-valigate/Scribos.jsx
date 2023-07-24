@@ -101,7 +101,7 @@ function Scribos({short, region}) {
         {error != null && <Error error={error} short={short}/>}
         {!error && !result && !showNSForm && !showThanks && <div id="valigate" className="valigate"></div>}
         {showNSForm && <div className="form">
-          <NSForm sendReport={sendReport} />
+          <NSForm sendReport={sendReport} region={region} />
         </div>}
         {showThanks && <div className="thankyou">
           <NSThanks />

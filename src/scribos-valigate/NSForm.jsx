@@ -24,7 +24,7 @@ function Thumbnail({ file }) {
     width={150} />);
 }
 
-export function NSForm({ sendReport }) {
+export function NSForm({ sendReport, region }) {
   const [fileList, setFileList] = React.useState(null)
   return (
     <div className="authentication-form-bg">
@@ -40,7 +40,7 @@ export function NSForm({ sendReport }) {
           <p className="authentication-form__scan-desc">Please provide us more information to help us investigate the issue</p>
         </div>
         <Formik
-          initialValues={{ name: '', email: '', phone_number: '601', shop_name: '', shop_city: '', shop_address: '', avatar: undefined, contact_agreement: false }}
+          initialValues={{ name: '', email: '', phone_number: region === "Philippines" ? "63" : "601", shop_name: '', shop_city: '', shop_address: '', avatar: undefined, contact_agreement: false }}
           validate={values => {
             const errors = {};
             if (!values.name || !/^[A-Za-z\s]*$/i.test(values.name)) {
@@ -49,9 +49,15 @@ export function NSForm({ sendReport }) {
             if (!values.email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
               errors.email = 'Please enter a valid email address';
             }
-            if (!values.phone_number || !/^601[0-9]{8,9}$/i.test(values.phone_number)) {
+            // if (!values.phone_number || !/^601[0-9]{8,9}$/i.test(values.phone_number)) {
+            //   errors.phone_number = 'Please enter a valid phone number';
+            // }
+            if (!values.phone_number || !/^(63[0-9]{10}|601[0-9]{8,9})$/i.test(values.phone_number)) {
               errors.phone_number = 'Please enter a valid phone number';
             }
+            // if (!values.phone_number || !/^(63[0-9]{2}[0-9]{8}|601[0-9]{8,9})$/i.test(values.phone_number)) {
+            //   errors.phone_number = 'Please enter a valid phone number';
+            // }            
             if (!values.shop_name) {
               errors.shop_name = 'Please enter Shop name';
             }
