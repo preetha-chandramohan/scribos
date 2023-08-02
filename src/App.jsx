@@ -122,8 +122,8 @@ function App({ userLocaleX }) {
     if (lang === MALAYSIA) {
       setShow(true);
       logEvent(analytics, "trust_lp_my_chosen");
-      setCurrentAppLocale(AppLocale["ms"]);
-      setShort("MS");
+      setCurrentAppLocale(AppLocale["en"]);
+      setShort("EN");
       setListOfLang(["EN", "MS"]);
     } else if (lang === INDONESIA) {
       setShow(false);
