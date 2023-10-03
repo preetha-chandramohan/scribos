@@ -154,6 +154,12 @@ function App({ userLocaleX }) {
 
   return (
     <HelmetProvider>
+      <Helmet>
+        <title>Consumer protection</title>
+        <meta name="description" content="Trust" />
+        {region === 'Malaysia' && <meta name="apple-itunes-app" content="app-id=6446016138, app-clip-bundle-id=my.enfagrow.trust.Clip"/>}
+        {region === 'Philippines' && <meta name="apple-itunes-app" content="app-id=6451102183, app-clip-bundle-id=ph.enfagrow.trust.Clip"/>}
+      </Helmet>
       <LocaleContext.Provider value={userLocale}>
         <IntlProvider
           locale={currentAppLocale.locale}
